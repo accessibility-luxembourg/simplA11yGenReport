@@ -1,0 +1,203 @@
+{
+    "1": [
+        {
+            "criterias": ["1.1", "1.3"], 
+            "title": "Images porteuses d'information",
+            "desc": ""
+        },
+        {
+            "criterias": ["1.2"], 
+            "title": "Images de décoration",
+            "desc": ""
+        },
+        {
+            "criterias": ["1.4", "1.5"], 
+            "title": "Captcha",
+            "desc": ""
+        },
+        {
+            "criterias": ["1.6", "1.7"], 
+            "title": "Images porteuses d'information complexe",
+            "desc": ""            
+        }
+    ],
+    "2": [
+        {
+            "criterias": ["2.1"], 
+            "title": "Cadres",
+            "desc": ""            
+        }        
+    ],
+    "3": [
+        {
+            "criterias": ["3.1"], 
+            "title": "Informations données par la couleur",
+            "desc": ""         
+        },
+        {
+            "criterias": ["3.2"], 
+            "title": "Contrastes des textes",
+            "desc": ""         
+        }
+    ],
+    "4": [
+        {
+            "criterias": ["4.1", "4.2"], 
+            "title": "Transcription textuelle et audiodescription",
+            "desc": ""         
+        },
+        {
+            "criterias": ["4.3", "4.4"], 
+            "title": "Sous-titres",
+            "desc": ""         
+        },
+        {
+            "criterias": ["4.8", "4.9"], 
+            "title": "Médias non-temporels",
+            "desc": ""         
+        },
+        {
+            "criterias": ["4.10"], 
+            "title": "Son déclenché automatiquement",
+            "desc": ""         
+        }, 
+        {
+            "criterias": ["4.11"], 
+            "title": "Contrôle des lecteurs vidéo au clavier",
+            "desc": ""         
+        }                   
+    ],
+    "5": [
+        {
+            "criterias": ["5.6", "5.7"], 
+            "title": "Tableaux de données",
+            "desc": ""         
+        } 
+    ],
+    "6": [
+        {
+            "criterias": ["6.1"], 
+            "title": "Pertinence des intitulés",
+            "desc": ""         
+        },
+        {
+            "criterias": ["6.2"], 
+            "title": "Présence d'intitulés",
+            "desc": ""         
+        }        
+    ],
+    "7": [
+        {
+            "criterias": ["7.3"], 
+            "title": "Éléments interactifs inaccessibles au clavier",
+            "desc": ""         
+        }         
+    ],
+    "8": [
+        {
+            "criterias": ["8.1", "8.2"], 
+            "title": "Validité du code source de la page",
+            "desc": ""         
+        }, 
+        {
+            "criterias": ["8.3", "8.4", "8.7", "8.8"], 
+            "title": "Indication de langue",
+            "desc": ""         
+        }, 
+        {
+            "criterias": ["8.5", "8.6"], 
+            "title": "Titre de page",
+            "desc": ""         
+        }         
+    ],
+    "9": [
+        {
+            "criterias": ["9.1"], 
+            "title": "Titres",
+            "desc": ""         
+        },
+        {
+            "criterias": ["9.2"], 
+            "title": "Structure du document",
+            "desc": ""         
+        }                 
+    ],
+    "10": [
+        {
+            "criterias": ["10.7"], 
+            "title": "Visibilité du focus",
+            "desc": ""         
+        },
+        {
+            "criterias": ["10.8"], 
+            "title": "Contenus cachés",
+            "desc": ""         
+        }, 
+        {
+            "criterias": ["10.9", "10.10"], 
+            "title": "Information donnée par la forme, la taille ou la position",
+            "desc": ""         
+        }, 
+        {
+            "criterias": ["10.14"], 
+            "title": "Contenus additionnels au survol et au focus",
+            "desc": ""         
+        }
+    ],
+    "11": [
+        {
+            "criterias": ["11.1", "11.2", "11.5", "11.6", "11.7"], 
+            "title": "Identification des champs, des contrôles et des regroupements de formulaires",
+            "desc": ""         
+        },
+        {
+            "criterias": ["11.9"], 
+            "title": "Intitulés de boutons pertinents",
+            "desc": ""         
+        },
+        {
+            "criterias": ["11.10"], 
+            "title": "Contrôle et aide à la saisie",
+            "desc": ""         
+        }
+    ],
+    "12": [
+        {
+            "criterias": ["12.6"], 
+            "title": "Landmarks ARIA",
+            "desc": ""         
+        },
+        {
+            "criterias": ["12.7"], 
+            "title": "Liens d'accès rapide",
+            "desc": ""         
+        }, 
+        {
+            "criterias": ["12.8"], 
+            "title": "Ordre de tabulation",
+            "desc": ""         
+        },
+        {
+            "criterias": ["12.11"], 
+            "title": "Contenus additionnels",
+            "desc": ""         
+        }
+    ],
+    "13": [
+        {
+            "criterias": ["13.1"], 
+            "title": "Contrôle des limites de temps",
+            "desc": ""         
+        },
+        {
+            "criterias": ["13.7"], 
+            "title": "Effets de flash",
+            "desc": ""         
+        },
+        {
+            "criterias": ["13.8"], 
+            "title": "Contenus en mouvement ou clignotants",
+            "desc": ""         
+        }              
+    ]
+}

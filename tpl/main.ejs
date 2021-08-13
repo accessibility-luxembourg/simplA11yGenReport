@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Audit d'accessibilité simplifié du site <%= info.site %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            <%- include('styles.css') %>
 
+            .skip-link {
+                position: relative;
+                height: 1em;
+            }
+            .skip-link a {
+                position: absolute;
+                left: -7000px;
+            }
+
+            .skip-link a:focus {
+                left: 0;
+            }
+        </style>
     </head>
-    <body>
-
+    <body class="markdown-body">
+        <header role="banner">
+            <div class="skip-link">
+                <a href="#main">contenu principal</a>
+            </div>
+            <h1><span>Audit d'accessibilité simplifié<br><%= info.site %></span></h1>
+            <p><%= info.date %><br>Service information et presse</p>
+        </header>
+        <main role="main" id="main" tabindex="-1">
+                <%- include('intro', {info: info}) %>
+            <h2>Annexe technique</h2>
+            <% topics.forEach(topic => { %>
+                <%- include('topic', {topic: topic, solutions: solutions, issues: issues}) %>
+            <% }) %>
+        </main>
+        <footer role="contentinfo">
+            <p>Ce rapport est publié par le <a href="https://sip.gouvernement.lu">service information et presse</a> sous <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.fr">licence CC0</a>.</p>
+        </footer>
     </body>
 </html>

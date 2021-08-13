@@ -1,0 +1,19 @@
+<div class="topic">
+    <h3><%= topic.name %></h3>
+    <p class="desc"><%- md.renderInline(topic.desc) %></p>
+    <% 
+        const sol = solutions[topic.num]
+        const iss = issues.filter(e => {return (e.topic == topic.num)}) 
+        sol.forEach(s => { 
+            const shortList = iss.filter(e => {return (s.criterias.includes(e.criteria))})
+            if (shortList.length != 0) { %>
+                <h4><%= s.title %></h4>
+                <p><%= s.desc %></p>
+                <h5>Problèmes détectés</h5>
+                <% shortList.forEach(pb => { %>
+                    <p>Sur la page <%= pb.page %> : <%= pb.comment %></p>
+                <% }) %>
+    <%      }
+        })
+    %> 
+</div>
