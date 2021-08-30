@@ -3,12 +3,12 @@
         {
             "criterias": ["1.1", "1.3"], 
             "title": "Images porteuses d'information",
-            "desc": ""
+            "desc": "Les images porteuses d’information doivent avoir une alternative textuelle qui sera restituée aux personnes utilisant un lecteur d’écran, aveugles et grands malvoyants. Cette alternative textuelle doit fournir l'information véhiculée par l'image, il ne s'agit pas d'une description de l'image. Pour une image bitmap, son attribut `alt` doit contenir cette alternative textuelle. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=img` et son alternative textuelle pourra être fournie via les attributs `aria-label` ou `aria-labelledby`."
         },
         {
             "criterias": ["1.2"], 
             "title": "Images de décoration",
-            "desc": ""
+            "desc": "Les images de décoration ne doivent pas avoir d’alternative textuelle et doivent être ignorées correctement par les technologies d’assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d’écran (aveugles et grands malvoyants). Pour une image bitmap, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l’attribut `aria-hidden=true`."
         },
         {
             "criterias": ["1.4", "1.5"], 
@@ -17,27 +17,38 @@
         },
         {
             "criterias": ["1.6", "1.7"], 
-            "title": "Images porteuses d'information complexe",
-            "desc": ""            
+            "title": "Images porteuses d'information complexes",
+            "desc": "Certaines images porteuses d'informations sont particulièrement complexes, par exemple lorsqu'elles présentent des graphiques, schémas, cartes, etc. Dans ce cas, ces images nécessitent une description détaillée adjacente à l'image afin de permettre aux personnes aveugles et dyslexiques d'accéder à l'information véhiculée par l'image. Pour mettre à disposition cette description détaillée, plusieurs solutions sont possibles. Le texte peut être adjacent à l'image dans la même page, on peut placer un lien adjacent à l'image qui mène à une page où se trouve la description. Le texte peut aussi être inclus dans un composant permettant de le masquer et de l'afficher sur demande, au clic d'un bouton « afficher la description de l'image » (**design pattern**{lang=en} [« disclosure »](https://www.w3.org/TR/wai-aria-practices-1.1/#disclosure){lang=en})."            
         }
     ],
     "2": [
         {
             "criterias": ["2.1"], 
-            "title": "Cadres",
-            "desc": ""            
+            "title": "Titres de cadres",
+            "desc": "Les titres de cadres sont utiles à la compréhension de la structure de la page et des contenus pour les personnes aveugles. Tout cadre (élément `<iframe>` ou `<frame>`) doit avoir un titre fourni via son attribut `title`. Ce titre doit être pertinent, il doit représenter le contenu du cadre."            
         }        
     ],
     "3": [
         {
             "criterias": ["3.1"], 
-            "title": "Informations données par la couleur",
-            "desc": ""         
+            "title": "Informations données uniquement par la couleur",
+            "desc": "Ce type d’information est un problème pour les personnes déficientes visuelles, aveugles ou par exemple les personnes qui ne voient pas certaines couleurs ou ne perçoivent simplement pas les couleurs. Pour chaque information véhiculée par la couleur, il est nécessaire de mettre en place une alternative."         
         },
         {
             "criterias": ["3.2"], 
             "title": "Contrastes des textes",
-            "desc": ""         
+            "desc": [
+                "Les contrastes de couleurs sont importants pour plusieurs déficiences visuelles comme les grands malvoyants ou les personnes ayant des problèmes de perception des couleurs.",
+                "Les contrastes minimaux d’un texte sur le fond de page sont définis par le RGAA comme suit :",
+                "-	Pour un texte sans effet de graisse",
+                "    - De taille inférieure à 24 px : le contraste minimum est de 4.5:1 ;",
+                "    - De taille supérieure ou égale à 24 px : le contraste minimum est de 3:1.",
+                "-	Pour un texte en gras",
+                "    - De taille inférieure à 18.5 px : le contraste minimum est de 4.5:1 ;",
+                "    - De taille supérieure à 18.5 px : le contraste minimum est de 3:1.",
+                "Pour vérifier les contrastes, on peut utiliser un outil tel que [« Colour Contrast Analyser »](https://www.tpgi.com/color-contrast-checker/){lang=en}.",
+                "Si les problèmes de contraste ne peuvent être résolus simplement, il est aussi possible d’utiliser un **« style switcher »**{lang=en}. C’est une fonctionnalité proposée par le site qui permet de renforcer les contrastes pour les personnes qui ont des problèmes avec les couleurs. Un exemple de **« style switcher »**{lang=en} est disponible sur le site [sncf.com](https://www.sncf.com/fr), dans son menu « Accessibilité ».`" 
+            ]
         }
     ],
     "4": [
@@ -64,21 +75,21 @@
         {
             "criterias": ["4.11"], 
             "title": "Contrôle des lecteurs vidéo au clavier",
-            "desc": ""         
+            "desc": "Si les vidéos présentes sur le site sont dérogées car publiées avant le 23 septembre 2020, cette dérogation ne s’applique pas au lecteur vidéo lui-même qui se doit d’être accessible. La consultation de chaque média temporel doit en effet être contrôlable par le clavier et tout dispositif de pointage. Cela permet aux personnes ayant un handicap moteur d’accéder à ces contenus."         
         }                   
     ],
     "5": [
         {
             "criterias": ["5.6", "5.7"], 
-            "title": "Tableaux de données",
-            "desc": ""         
+            "title": "Déclaration des entêtes et liaison des cellules d’entêtes et de données",
+            "desc": "Les utilisateurs de lecteurs d’écran, de loupe d’écran vocalisée ne peuvent percevoir le tableau dans son ensemble. Il est donc important de leur donner des informations sur les liens entre entêtes et cellules via des structures HTML dédiées. Les entêtes de colonnes et de lignes doivent notamment être déclarées via la balise `th`. Dans un tableau de données simple, où chaque entête est valable pour l'ensemble de la ligne ou de la colonne, la relation entre les cellules et les entêtes doit être définie en appliquant un attribut `scope=col` à toutes les entêtes de colonnes et `scope=row` à toutes les entêtes de lignes. Dans un [tableau de données complexe](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#tableau-de-donnees-complexe), chaque entête doit avoir un identifiant déclaré via l'attribut `id` et chaque cellule doit faire référence à ces entêtes via l'attribut `headers` (liste d'identifiants séparés par des espaces)."         
         } 
     ],
     "6": [
         {
             "criterias": ["6.1"], 
             "title": "Pertinence des intitulés",
-            "desc": ""         
+            "desc": "Chacun doit pouvoir comprendre aisément la fonction et la destination de chaque lien. Les problèmes rencontrés ici le sont pour les aveugles, les malvoyants, les handicapés moteurs qui naviguent à la voix et les handicapés cognitifs."         
         },
         {
             "criterias": ["6.2"], 
@@ -90,24 +101,30 @@
         {
             "criterias": ["7.3"], 
             "title": "Éléments interactifs inaccessibles au clavier",
-            "desc": ""         
+            "desc": "Les composants riches développés en JavaScript doivent respecter des modèles de conception spécifiques pour pouvoir être considérés comme accessibles (modèles de conception décrits dans le document [« WAI-ARIA Authoring practices »](https://www.w3.org/TR/wai-aria-practices-1.1/){lang=en}). Sans cela le composant ne sera pas correctement restitué aux utilisateurs de lecteurs d'écran qui ne sauront pas comment l'utiliser. Ces composants doivent notamment utiliser des interactions au clavier spécifiques, sans lesquelles ces composants seront inutilisables pour les utilisateurs de la navigation au clavier."         
         }         
     ],
     "8": [
         {
             "criterias": ["8.1", "8.2"], 
             "title": "Validité du code source de la page",
-            "desc": ""         
+            "desc": "Les lecteurs d’écran s’appuient sur la sémantique des balises HTML pour restituer le contenu et naviguer, si la syntaxe HTML n’est pas respectée ou si les balises sont détournées, cela peut avoir un impact sur la navigation qui peut devenir inopérante et la restitution qui peut devenir incompréhensible. Pour vérifier la validité de la syntaxe HTML, on peut utiliser le [validateur HTML du W3C](https://validator.w3.org/nu/) avec le bookmarklet [« WCAG 2.1 parsing error »](https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/){lang=en}. Ce bookmarklet filtre les résultats et ne montre que les erreurs ayant un impact sur l’accessibilité."         
         }, 
         {
             "criterias": ["8.3", "8.4", "8.7", "8.8"], 
             "title": "Indication de langue",
-            "desc": ""         
+            "desc": [
+                "Les lecteurs d’écran utilisent les indications de langue pour vocaliser correctement le contenu. La langue principale de la page est spécifiée via l'attribut `lang` sur l'élément `html`. Lorsqu'un mot d'origine étrangère est inséré dans du contenu écrit dans la langue principale de la page, il doit posséder si nécessaire une indication de langue. L'indication de langue se fait par l'intermédiaire de l'attribut `lang`.",
+                "Il existe néanmoins des exceptions :",
+                "- Lorsqu'il s'agit d'un nom, l'indication de langue doit être faite uniquement quand le nom doit se prononcer dans sa langue d'origine ;",
+                "- Lorsqu'il s’agit d'un mot d'origine étrangère, présent dans le dictionnaire de la langue principale de la page, l'indication de langue ne doit pas être faite ;",
+                "- Lorsqu'il s'agit d'un mot d'origine étrangère d'usage courant, mais absent du dictionnaire, l'indication de langue doit être faite uniquement si la prononciation dans la langue principale de la page est problématique."
+            ]
         }, 
         {
             "criterias": ["8.5", "8.6"], 
             "title": "Titre de page",
-            "desc": ""         
+            "desc": "Le titre de page est la première information restituée aux aveugles et grands malvoyants, elle leur permet de confirmer que le lien sur lequel ils viennent de cliquer les a bien menés au bon endroit, il permet aussi de retrouver une page dans l’historique, les bookmarks ou les onglets ouverts. Tout changement significatif de l’état de la page doit être repris dans le titre de la page (pagination, erreur, étape d’un workflow, etc.). "         
         }         
     ],
     "9": [
@@ -118,15 +135,15 @@
         },
         {
             "criterias": ["9.2"], 
-            "title": "Structure du document",
-            "desc": ""         
+            "title": "Structure du document HTML5",
+            "desc": "La structuration du document HTML5 permet aux aveugles, grands malvoyants et handicapés moteurs de naviguer très rapidement entre les zones principales de la page (header, footer, zone de contenu principale, navigation, ...)"         
         }                 
     ],
     "10": [
         {
             "criterias": ["10.7"], 
             "title": "Visibilité du focus",
-            "desc": ""         
+            "desc": "Les handicapés moteurs qui naviguent au clavier utilisent l’indicateur de focus fourni par le site sur les éléments interactifs pour savoir où ils se situent dans la page. L’indicateur de focus se déplace via les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>. L’indicateur de focus par défaut peut être désactivé via CSS, dans ce cas il est nécessaire de changer le style de l’élément interactif de manière visible au focus."         
         },
         {
             "criterias": ["10.8"], 
@@ -148,7 +165,7 @@
         {
             "criterias": ["11.1", "11.2", "11.5", "11.6", "11.7"], 
             "title": "Identification des champs, des contrôles et des regroupements de formulaires",
-            "desc": ""         
+            "desc": "L’identification de ces éléments fournissent aux aveugles et grands malvoyants les informations nécessaires pour pouvoir remplir un formulaire. Les handicapés moteurs utilisant un système de reconnaissance vocale s’appuient aussi sur ces éléments pour se déplacer dans les différents [champs](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#champ-de-saisie-de-formulaire) et actionner les boutons. Pour associer une [étiquette](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#etiquette-de-champ-de-formulaire) (`label`) à un champ de formulaire on peut utiliser l'attribut `for` de l'étiquette dont la valeur doit être identique à celle de l'attribut `id` du champ. Les [champs de même nature](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#champs-de-meme-nature) doivent être regroupés, cela peut être réalisé via l'élément `fieldset` auquel on doit fournir une [légende](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#legende) via l'élément `legend`. "         
         },
         {
             "criterias": ["11.9"], 
@@ -158,7 +175,7 @@
         {
             "criterias": ["11.10"], 
             "title": "Contrôle et aide à la saisie",
-            "desc": ""         
+            "desc": "Que ce soit pour les handicapés cognitifs ou pour les aveugles et déficients visuels, il est nécessaire d’expliciter les formats de données attendus dans les consignes et les messages d’erreur, ainsi que le caractère obligatoire de la saisie de certains champs."         
         }
     ],
     "12": [
