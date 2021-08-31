@@ -12,8 +12,8 @@
         },
         {
             "criterias": ["1.4", "1.5"], 
-            "title": "Captcha",
-            "desc": ""
+            "title": "CAPTCHA",
+            "desc": "Tout CAPTCHA visuel qui ne fournit pas d'alternative permettant d'identifier sa nature et n'est pas accompagné d'un moyen alternatif pour passer le test (ex: CAPTCHA sonore) constitue un problème insurmontable pour les aveugles et les déficients visuels. Différentes alternatives aux CAPTCHA visuels sont décrites dans le document [« Inaccessibility of CAPTCHA - Alternatives to Visual Turing Tests on the Web »](https://www.w3.org/TR/turingtest/){lang=en} publié par le W3C."
         },
         {
             "criterias": ["1.6", "1.7"], 
@@ -55,22 +55,33 @@
         {
             "criterias": ["4.1", "4.2"], 
             "title": "Transcription textuelle et audiodescription",
-            "desc": ""         
+            "desc": [ 
+                "Si une vidéo possède des textes incrustés ou des informations sonores (ex: personnes qui parlent sur la piste sonore) alors il est nécessaire de fournir une transcription textuelle. De même pour un media audio seulement qui est porteur d'information (ex: podcast), une transcription textuelle est nécessaire.",
+                "L'absence de transcription textuelle sur de tels medias va empêcher l'accès à l'information à de nombreux utilisateurs comme les aveugles, les malvoyants, les sourds, les malentendants, les handicapés moteurs et cognitifs.",
+                "Une transcription textuelle présente de manière structurée toutes les informations visuelles et sonores de la vidéo dans l'ordre chronologique de leur apparition. Celle-ci peut-être présente sur la même page que la vidéo en question ou derrière un lien adjacent à la vidéo.",
+                "Par ailleurs, si une vidéo possède des informations importantes véhiculées uniquement par l'image (ex: textes incrustés), il est nécessaire de fournir une audiodescription synchronisée. Il s'agit d'une piste sonore supplémentaire qui s'ajoute à la piste sonore principale et décrit les éléments visuels importants qui ne peuvent être compris à partir de la poste sonore principale. Ces descriptions sont réalisées dans les blancs de la piste sonore principale." 
+            ]
         },
         {
             "criterias": ["4.3", "4.4"], 
             "title": "Sous-titres",
-            "desc": ""         
+            "desc": "Les vidéos sur votre site doivent avoir des sous-titres. Il existe deux types de sous-titres : les sous-titres de traduction et les sous-titres pour sourds et malentendants. Il est nécessaire de fournir ici des sous-titres pour sourds et malentendants. Ceux-ci doivent notamment fournir en plus des dialogues toutes les informations sur les éléments sonores nécessaires pour comprendre l'action. Les sous-titres doivent être correctement synchronisés avec la vidéo."         
         },
         {
             "criterias": ["4.8", "4.9"], 
             "title": "Médias non-temporels",
-            "desc": ""         
+            "desc": "Un média non-temporel est une application interactive insérée dans une page web. Exemples : carte interactive, diaporama, jeu vidéo. Chaque média non-temporel doit avoir une alternative accessible. Cette alternative doit permettre d'accéder au même contenu et à des fonctionnalités similaires. Elle peut-être disponible directement dans la page ou dans une autre page par l'intermédiaire d'un lien adjacent au média non-temporel."         
         },
         {
             "criterias": ["4.10"], 
             "title": "Son déclenché automatiquement",
-            "desc": ""         
+            "desc": [
+                "Tout son déclenché automatiquement (sans action de l'utilisateur) est autorisé si l'une de ces conditions est remplie :",
+                "- la durée est inférieure ou égale à 3 secondes ;",
+                "- le son peut être stoppé par l'utilisateur ; ",
+                "- le volume du son peut être contrôlé indépendamment du volume système.",
+                "Les sons déclenchés automatiquement posent problème aux aveugles et grands malvoyants, dans la mesure où ils peuvent recouvrir le son de la synthèse vocale qu'ils utilisent pour naviguer."         
+            ]
         }, 
         {
             "criterias": ["4.11"], 
@@ -94,7 +105,9 @@
         {
             "criterias": ["6.2"], 
             "title": "Présence d'intitulés",
-            "desc": ""         
+            "desc": [
+                "Un lien doit toujours avoir un intitulé. Celui-ci permet aux utilisateurs de comprendre la destination du lien. La présence d'intitulés sur tous les liens est particulièrement importante pour les aveugles et malvoyants. Pour un lien qui ne contient que du texte, l'intitulé du lien correspond à ce texte. Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image.  (Pour une image bitmap, son attribut `alt` doit contenir l'intitulé du lien. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=img` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby`). Lorsqu'un lien contient du texte et des images, l'intitulé du lien correspond à la concaténation des intitulés de ces différents éléments contenus dans le lien."   
+            ]
         }        
     ],
     "7": [
@@ -131,7 +144,7 @@
         {
             "criterias": ["9.1"], 
             "title": "Titres",
-            "desc": ""         
+            "desc": "Les titres permettent aux utilisateurs de comprendre la structure du document. Ils permettent aussi aux utilisateurs aveugles, malvoyants et handicapés moteurs de naviguer de titre en titre dans la page. Il est donc important d'avoir une bonne hiérarchie de titres dans une page. Cette hiérarchie est similaire à un plan de document. La vérification de la hiérarchie de titres peut se faire via l'extension de navigateur [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/){lang=en}."
         },
         {
             "criterias": ["9.2"], 
@@ -148,17 +161,17 @@
         {
             "criterias": ["10.8"], 
             "title": "Contenus cachés",
-            "desc": ""         
+            "desc": "Tout contenu dans la page peut être ignoré par les technologies d'assistance (notamment en utilisant l'attribut `aria-hidden=true`). Si un contenu est visible mais ignoré par les technologies d'assistance, les utilisateurs de ces technologies d'assistance ne pourront pas prendre connaissance du contenu ni interagir avec les éventuels éléments interactifs qu'ils pourraient contenir. La visibilité d'un contenu doit donc être cohérente pour tous les utilisateurs du site, qu'ils utilisent ou non une technologie d'assistance."         
         }, 
         {
             "criterias": ["10.9", "10.10"], 
             "title": "Information donnée par la forme, la taille ou la position",
-            "desc": ""         
+            "desc": "Ce type d’information est un problème pour les personnes aveugles et grands malvoyants. Pour chaque information véhiculée par la forme, la taille ou la position, il est nécessaire de mettre en place une alternative."         
         }, 
         {
             "criterias": ["10.14"], 
             "title": "Contenus additionnels au survol et au focus",
-            "desc": ""         
+            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex: tooltips, menus déroulants). Tout élément qui apparait au survol, doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."         
         }
     ],
     "11": [
@@ -170,7 +183,7 @@
         {
             "criterias": ["11.9"], 
             "title": "Intitulés de boutons pertinents",
-            "desc": ""         
+            "desc": "Les boutons doivent avoir des intitulés pertinents, qui communiquent l'action réalisée par le bouton. Ces informations sont particulièrement importantes pour les déficients visuels et cognitifs."         
         },
         {
             "criterias": ["11.10"], 
