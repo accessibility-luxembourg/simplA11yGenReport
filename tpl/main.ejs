@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             <%- include('styles.css') %>
+            <%- include('print.css') %>
 
             .skip-link {
                 position: relative;
@@ -26,7 +27,7 @@
             <div class="skip-link">
                 <a href="#main">contenu principal</a>
             </div>
-            <h1><span>Audit d'accessibilité simplifié<br><%= info.site %></span></h1>
+            <h1 id="title"><span>Audit d'accessibilité simplifié<br><%= info.site %></span></h1>
             <p><%= info.date %><br>Service information et presse</p>
         </header>
         <main role="main" id="main" tabindex="-1">

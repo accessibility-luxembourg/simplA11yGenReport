@@ -1,0 +1,22 @@
+@page {
+    size: A4;
+    margin-top: 10mm;
+    margin-right: 20mm;
+    margin-bottom: 25mm;
+    margin-left: 15mm;
+  
+    @bottom-left {
+      content: counter(page);
+    }
+  
+    @bottom-center {
+      content: string(title);
+      text-transform: uppercase;
+    }
+  
+  }
+  
+  h1#title {
+    <!-- "Moby Dick" -->
+    string-set: title content(text);
+  }

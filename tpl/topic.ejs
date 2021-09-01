@@ -1,17 +1,19 @@
 <div class="topic">
     <h3><%= topic.name %></h3>
-    <p class="desc"><%- md.renderInline(topic.desc) %></p>
+    <%- md.render(topic.desc) %>
     <% 
         const sol = solutions[topic.num]
         const iss = issues.filter(e => {return (e.topic == topic.num)}) 
+
         sol.forEach(s => { 
-            const shortList = iss.filter(e => {return (s.criterias.includes(e.criteria))})
-            if (shortList.length != 0) { %>
-                <h4><%= s.title %></h4>
-                <p><%= s.desc %></p>
+            const shortList = iss.filter(e => {return (s.criterias.includes(e.criteria))}) %>
+
+            <h4><%- md.renderInline(s.title) %></h4>
+                <%- md.render(s.desc) %>
+            <% if (shortList.length != 0) { %>
                 <h5>Problèmes détectés</h5>
                 <% shortList.forEach(pb => { %>
-                    <p>Sur la page <%= pb.page %> : <%= pb.comment %></p>
+                    <h6><a href="<%= info.pages[parseInt(pb.page)-1].value %>">Sur la page P0<%= pb.page %> :</a></h6> <%- mdForExcel.render(pb.comment) %>
                 <% }) %>
     <%      }
         })

@@ -3,13 +3,33 @@ const ejs = require('ejs')
 const MarkdownIt = require('markdown-it')
 const workbook = XLSX.readFile('112.public.lu.xlsx')
 let topics = require('./topics.json')
-const solutions = require('./solutions.json')
 const fs = require('fs')
 const p = require('path')
 const wkhtmltopdf = require('wkhtmltopdf')
-const md = MarkdownIt()
+const md = MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+    quotes: ['«\xA0', '\xA0»', '‹\xA0', '\xA0›']
+  }).use(require('markdown-it-attrs'))
+const mdForExcel = MarkdownIt({
+    html: true,
+    linkify: true,
+  })
 
-wkhtmltopdf.command = '.'+p.sep+'wkhtmltox'+p.sep+'bin'+p.sep+'wkhtmltopdf.exe'
+//wkhtmltopdf.command = '.'+p.sep+'wkhtmltox'+p.sep+'bin'+p.sep+'wkhtmltopdf.exe'
+
+function cleanupSolutions(solutions) {
+    Object.keys(solutions).forEach((topicIdx) => {
+        solutions[topicIdx].forEach((solution, solutionIdx) => {
+            if (typeof solution.desc !== "string") {
+                solutions[topicIdx][solutionIdx].desc = solution.desc.join('\r\n')
+            }
+        })
+    })
+    return solutions
+}
+const solutions = cleanupSolutions(require('./solutions.json'))
 
 function getFieldVal(sheet, x, y, type) {
     if (sheet[x+y]!== undefined) {
@@ -18,7 +38,6 @@ function getFieldVal(sheet, x, y, type) {
         return ''
     }
 }
-
 
 // read issues from Excel sheet
 const issues = []
@@ -51,7 +70,7 @@ for (let pageIdx = 1; pageIdx < 4; pageIdx++) {
 }
 
 // transform issues
-topics = topics.filter(e => {return topicsToDisplay.includes(e.num); })
+//topics = topics.filter(e => {return topicsToDisplay.includes(e.num); })
 
 
 const info = {}
@@ -71,12 +90,12 @@ info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
 info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
 
 // render issues
-ejs.renderFile('./tpl/main.ejs', {topics: topics, md: md, info: info, solutions: solutions, issues: issues}, function(err, str){
+ejs.renderFile('./tpl/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues}, function(err, str){
     if (err !== null) {
         console.log(err)
     }
     fs.writeFileSync('rapport-'+info['site']+'.html', str)
-    wkhtmltopdf(fs.createReadStream('rapport-'+info['site']+'.html'), { output: 'rapport-'+info['site']+'.pdf' })
+    //wkhtmltopdf(fs.createReadStream('rapport-'+info['site']+'.html'), { output: 'rapport-'+info['site']+'.pdf' })
 })
 
 
