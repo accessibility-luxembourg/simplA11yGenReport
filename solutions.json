@@ -40,10 +40,10 @@
             "desc": [
                 "Les contrastes de couleurs sont importants pour plusieurs déficiences visuelles comme les grands malvoyants ou les personnes ayant des problèmes de perception des couleurs.",
                 "Les contrastes minimaux d’un texte sur le fond de page sont définis par le RGAA comme suit :",
-                "-	Pour un texte sans effet de graisse",
+                "- Pour un texte sans effet de graisse",
                 "    - De taille inférieure à 24 px : le contraste minimum est de 4.5:1 ;",
                 "    - De taille supérieure ou égale à 24 px : le contraste minimum est de 3:1.",
-                "-	Pour un texte en gras",
+                "- Pour un texte en gras",
                 "    - De taille inférieure à 18.5 px : le contraste minimum est de 4.5:1 ;",
                 "    - De taille supérieure à 18.5 px : le contraste minimum est de 3:1.",
                 "Pour vérifier les contrastes, on peut utiliser un outil tel que [« Colour Contrast Analyser »](https://www.tpgi.com/color-contrast-checker/){lang=en}.",
