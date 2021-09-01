@@ -195,39 +195,46 @@
         {
             "criterias": ["12.6"], 
             "title": "Landmarks ARIA",
-            "desc": ""         
+            "desc": [ 
+                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks])(https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone :", 
+                "- `role=banner` pour l'entête,",
+                "- `role=navigation` pour le menu de navigation,",
+                "- `role=main` pour la zone de contenu principale,",
+                "- `role=contentinfo` pour le pied de page,",
+                "- `role=search` pour le moteur de recherche."
+            ]         
         },
         {
             "criterias": ["12.7"], 
             "title": "Liens d'accès rapide",
-            "desc": ""         
+            "desc": "Les liens d'accès rapide sont des liens présents en début de page et permettent aux utilisateurs qui naviguent au clavier et aux utilisateurs malvoyants qui utilisent une loupe d'écran d'éviter des zones de contenus redondants comme l'entête et la navigation. Il est indispensable d'avoir au moins un lien d'accès rapide vers la zone de contenu principale (`<main>`). Ces liens peuvent être positionnés hors écran et apparaître à la prise de focus."         
         }, 
         {
             "criterias": ["12.8"], 
             "title": "Ordre de tabulation",
-            "desc": ""         
+            "desc": "L'[ordre de tabulation](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#ordre-de-tabulation), c'est-à-dire l'ordre dans lequel le focus se déplace lorsqu'on utilise les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd> doit être cohérent. Si l'ordre de tabulation est incohérent, les aveugles, les déficients visuels, les handicapés moteurs et handicapés cognitifs auront de grandes difficultés à consulter la page."         
         },
         {
             "criterias": ["12.11"], 
             "title": "Contenus additionnels",
-            "desc": ""         
+            "desc": "Un exemple de contenu additionnel apparaissant au survol ou à la prise de focus est une tooltip personnalisée proposant un lien dans son contenu. Les utilisateurs aveugles et les personnes avec un handicap moteur doivent pouvoir accéder au clavier à ces contenus."         
         }
     ],
     "13": [
         {
             "criterias": ["13.1"], 
             "title": "Contrôle des limites de temps",
-            "desc": ""         
+            "desc": "L'utilisation de technologies d'assistance impacte directement la rapidité de lecture et d'utilisation d'un site. Dans ces conditions, l'absence de contrôle des limites de temps peut rendre impossible la lecture ou la réalisation de tâches. Les utilisateurs impactés sont les aveugles et déficients visuels, les handicapés moteurs et les handicapés mentaux."         
         },
         {
             "criterias": ["13.7"], 
             "title": "Effets de flash",
-            "desc": ""         
+            "desc": "Les effets de flash sont susceptibles de causer des crises d'épilepsie."         
         },
         {
             "criterias": ["13.8"], 
             "title": "Contenus en mouvement ou clignotants",
-            "desc": ""         
+            "desc": "Ces contenus posent problème aux utilisateurs avec des difficultés de lecture ou des troubles de l'attention. Les utilisateurs doivent avoir la possibilité de mettre le mouvement en pause, ou de masquer le contenu en mouvement."     
         }              
     ]
 }
