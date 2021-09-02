@@ -1,7 +1,7 @@
 const XLSX = require('xlsx')
 const ejs = require('ejs')
 const MarkdownIt = require('markdown-it')
-const workbook = XLSX.readFile('112.public.lu.xlsx')
+const workbook = XLSX.readFile(process.argv[2])
 let topics = require('./topics.json')
 const fs = require('fs')
 const p = require('path')
@@ -70,7 +70,7 @@ for (let pageIdx = 1; pageIdx < 4; pageIdx++) {
 }
 
 // transform issues
-//topics = topics.filter(e => {return topicsToDisplay.includes(e.num); })
+topics = topics.filter(e => {return topicsToDisplay.includes(e.num); })
 
 
 const info = {}
@@ -94,7 +94,7 @@ ejs.renderFile('./tpl/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel
     if (err !== null) {
         console.log(err)
     }
-    fs.writeFileSync('rapport-'+info['site']+'.html', str)
+    fs.writeFileSync('./out/rapport-'+info['site']+'.html', str)
     //wkhtmltopdf(fs.createReadStream('rapport-'+info['site']+'.html'), { output: 'rapport-'+info['site']+'.pdf' })
 })
 

@@ -1,0 +1,26 @@
+.skip-link {
+    position: relative;
+    height: 1em;
+}
+.skip-link a {
+    position: absolute;
+    left: -7000px;
+}
+
+.skip-link a:focus {
+    left: 0;
+}
+
+div.topic > div.nobreak > div.desc {
+   background-color: #eee;
+   padding: 1em;
+}
+
+div.topic > div.nobreak > div.desc > p {
+    margin-bottom: 0;
+}
+
+.logo {
+    display: none;
+    position: running(logoRunning);
+}

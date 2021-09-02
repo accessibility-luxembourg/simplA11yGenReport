@@ -1,0 +1,10 @@
+- intégrer les contenus pour les solutions
+    - restaurer les filtres
+- gestion du code dans les fichiers excel? ``` block et ` inline
+
+- est-ce que le site a une déclaration? -> s'il n'en a pas, rajouter un message et mentionner que c'est obligatoire.
+- analyse des fichiers PDF et résumé
+
+Plus tard: 
+
+- rajouter une TOC https://www.pagedjs.org/posts/2020-02-19-toc/ à voir si c'est nécessaire (longueur moyenne des docs)

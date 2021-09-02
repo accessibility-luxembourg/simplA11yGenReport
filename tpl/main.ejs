@@ -6,20 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             <%- include('styles.css') %>
+            <%- include('custom.css') %>
             <%- include('print.css') %>
-
-            .skip-link {
-                position: relative;
-                height: 1em;
-            }
-            .skip-link a {
-                position: absolute;
-                left: -7000px;
-            }
-
-            .skip-link a:focus {
-                left: 0;
-            }
         </style>
     </head>
     <body class="markdown-body">
@@ -27,12 +15,13 @@
             <div class="skip-link">
                 <a href="#main">contenu principal</a>
             </div>
-            <h1 id="title"><span>Audit d'accessibilité simplifié<br><%= info.site %></span></h1>
-            <p><%= info.date %><br>Service information et presse</p>
+            <h1 id="title">Audit d'accessibilité simplifié - <span id="site"><%= info.site %></span></h1>
+            <p><%= info.date %></p>
+            <div class="logo"><%- include('logo.ejs') %></div>
         </header>
         <main role="main" id="main" tabindex="-1">
                 <%- include('intro', {info: info}) %>
-            <h2>Annexe technique</h2>
+            <h2 class="break">Annexe technique</h2>
             <% topics.forEach(topic => { %>
                 <%- include('topic', {topic: topic, solutions: solutions, issues: issues}) %>
             <% }) %>

@@ -1,20 +1,27 @@
 <div class="topic">
-    <h3><%= topic.name %></h3>
-    <%- md.render(topic.desc) %>
+    <div class="nobreak">
+        <h3><%= topic.name %></h3>
+        <div class="desc"><%- md.render(topic.desc) %></div>
+    </div>
     <% 
         const sol = solutions[topic.num]
         const iss = issues.filter(e => {return (e.topic == topic.num)}) 
 
         sol.forEach(s => { 
-            const shortList = iss.filter(e => {return (s.criterias.includes(e.criteria))}) %>
-
+            const shortList = iss.filter(e => {return (s.criterias.includes(e.criteria))})
+            if (shortList.length != 0) {
+            %>
+            <div class="nobreak">
             <h4><%- md.renderInline(s.title) %></h4>
                 <%- md.render(s.desc) %>
-            <% if (shortList.length != 0) { %>
-                <h5>Problèmes détectés</h5>
-                <% shortList.forEach(pb => { %>
-                    <h6><a href="<%= info.pages[parseInt(pb.page)-1].value %>">Sur la page P0<%= pb.page %> :</a></h6> <%- mdForExcel.render(pb.comment) %>
-                <% }) %>
+            </div>
+            <div class="nobreak">
+            <h5>Problèmes détectés</h5>
+            <% shortList.forEach(pb => { %>
+                <h6><a href="<%= info.pages[parseInt(pb.page)-1].value %>">Sur la page P0<%= pb.page %> :</a></h6> 
+                <%- mdForExcel.render(pb.comment) %>
+            <% }) %>
+            </div>
     <%      }
         })
     %> 
