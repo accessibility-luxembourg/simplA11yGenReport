@@ -5,7 +5,10 @@ const workbook = XLSX.readFile(process.argv[2])
 let topics = require('./topics.json')
 const fs = require('fs')
 const p = require('path')
-const wkhtmltopdf = require('wkhtmltopdf')
+const declarations = require('./data/declarations-03092021.json')
+const docs = require('./data/docs-bureautiques-03092021.json')
+const { exit } = require('process')
+
 const md = MarkdownIt({
     html: true,
     linkify: true,
@@ -13,11 +16,9 @@ const md = MarkdownIt({
     quotes: ['«\xA0', '\xA0»', '‹\xA0', '\xA0›']
   }).use(require('markdown-it-attrs'))
 const mdForExcel = MarkdownIt({
-    html: true,
+    html: false,
     linkify: true,
   })
-
-//wkhtmltopdf.command = '.'+p.sep+'wkhtmltox'+p.sep+'bin'+p.sep+'wkhtmltopdf.exe'
 
 function cleanupSolutions(solutions) {
     Object.keys(solutions).forEach((topicIdx) => {
@@ -86,16 +87,21 @@ for (let i=0; i<3; i++) {
     info['pages'][i]['value'] = getFieldVal(workbook.Sheets['Échantillon'], 'C', i+7 , 'v')
 }
 
-info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
-info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
+const siteName = process.argv[2].replace(/^.*\//,'').replace('.xlsx', '')
+if (declarations[siteName] === undefined) {
+    console.log('site not found in declarations: '+ siteName)
+    exit(1)
+} 
+const declaration = declarations[siteName]
+const docsInfos = docs[siteName]
+
 
 // render issues
-ejs.renderFile('./tpl/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues}, function(err, str){
+ejs.renderFile('./tpl/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues, declaration: declaration, docs: docsInfos}, function(err, str){
     if (err !== null) {
         console.log(err)
     }
-    fs.writeFileSync('./out/rapport-'+info['site']+'.html', str)
-    //wkhtmltopdf(fs.createReadStream('rapport-'+info['site']+'.html'), { output: 'rapport-'+info['site']+'.pdf' })
+    fs.writeFileSync('./out/rapport-'+siteName+'.html', str)
 })
 
 

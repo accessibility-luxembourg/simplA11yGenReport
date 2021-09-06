@@ -21,7 +21,7 @@
         </header>
         <main role="main" id="main" tabindex="-1">
                 <%- include('intro', {info: info}) %>
-            <h2 class="break">Annexe technique</h2>
+            <h2>Annexe technique</h2>
             <% topics.forEach(topic => { %>
                 <%- include('topic', {topic: topic, solutions: solutions, issues: issues}) %>
             <% }) %>

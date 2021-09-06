@@ -1,9 +1,3 @@
-- intégrer les contenus pour les solutions
-    - restaurer les filtres
-- gestion du code dans les fichiers excel? ``` block et ` inline
-
-- est-ce que le site a une déclaration? -> s'il n'en a pas, rajouter un message et mentionner que c'est obligatoire.
-- analyse des fichiers PDF et résumé
 
 Plus tard: 
 
