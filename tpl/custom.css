@@ -22,5 +22,4 @@ div.topic > div.nobreak > div.desc > p {
 
 .logo {
     display: none;
-    position: running(logoRunning);
 }

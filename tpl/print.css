@@ -41,6 +41,7 @@
   body, main, header, footer {
     font-size: 11pt;
     font-family: Calibri;
+    font-variant-ligatures: none;
     margin: 0;
     width: 100%;
     color: #000;

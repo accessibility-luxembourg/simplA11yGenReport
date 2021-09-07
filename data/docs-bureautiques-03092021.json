@@ -12,6 +12,19 @@
         "pcent-pdf-pb-access": 100,
         "pcent-pdf-blocking-pb-access": 0
     },
+    "test.public.lu": {
+        "files": 807,
+        "pdf": 806,
+        "pdf-exempt": 711,
+        "pdf-non-exempt": 95,
+        "pdf-form": 5,
+        "pdf-pb-access": 95,
+        "pdf-blocking-pb-access": 0,
+        "pcent-pdf": 100,
+        "pcent-form": 1,
+        "pcent-pdf-pb-access": 100,
+        "pcent-pdf-blocking-pb-access": 2
+    },    
     "aec.gouvernement.lu": {
         "files": 19,
         "pdf": 14,

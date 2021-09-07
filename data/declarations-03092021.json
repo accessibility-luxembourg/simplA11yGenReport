@@ -85,5 +85,6 @@
     "sports.public.lu": true,
     "transports.public.lu": true,
     "travaux.public.lu": true,
-    "work-luxembourg.public.lu": true
+    "work-luxembourg.public.lu": true,
+    "test.public.lu": false
 }

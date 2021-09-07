@@ -1,4 +1,6 @@
 
-Plus tard: 
+- voir si possible de set la langue et le titre
 
-- rajouter une TOC https://www.pagedjs.org/posts/2020-02-19-toc/ à voir si c'est nécessaire (longueur moyenne des docs)
+Plus tard: 
+- générer des bookmarks, voir bug https://gitlab.pagedmedia.org/tools/pagedjs/issues/346
+- rajouter une TOC https://www.pagedjs.org/posts/2020-02-19-toc/ à voir si c'est nécessaire (longueur moyenne des docs) À structurer dans une balise nav

@@ -1,6 +1,6 @@
 <div class="topic">
     <div class="nobreak">
-        <h3><%= topic.name %></h3>
+        <h3 id="<%= topic.name.replace(/\s+/g, '-').toLowerCase() %>"><%= topic.name %></h3>
         <div class="desc"><%- md.render(topic.desc) %></div>
     </div>
     <% 
@@ -16,11 +16,8 @@
                 <%- md.render(s.desc) %>
             </div>
             <div class="nobreak">
-            <h5>Problèmes détectés</h5>
-            <% shortList.forEach(pb => { %>
-                <h6><a href="<%= info.pages[parseInt(pb.page)-1].value %>">Sur la page P0<%= pb.page %> :</a></h6> 
-                <%- mdForExcel.render(pb.comment) %>
-            <% }) %>
+            <h5>Problèmes détectés sur la <a href="<%= info.pages[parseInt(shortList[0].page)-1].value %>">page P0<%= shortList[0].page %></a></h5>
+            <%- mdForExcel.render(shortList[0].comment) %>
             </div>
     <%      }
         })

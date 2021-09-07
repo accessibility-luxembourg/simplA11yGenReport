@@ -1,11 +1,11 @@
-<h2>Appréciation générale</h2>
+<h2 id="appreciation-generale">Appréciation générale</h2>
 <p>Niveau d’accessibilité global pour les critères testés : <strong><%= info.score %></strong>.</p>
 <p>(Échelle : très faible, faible, moyen, bon, très bon)</p>
 
-<h2>Avertissement</h2>
+<h2 id="avertissement">Avertissement</h2>
 <p>Attention, l’audit effectué est un audit simplifié et non un audit de conformité (ou audit "complet"). Il a vocation à détecter une série de problèmes d’accessibilité mais n'est pas exhaustif. Le fait qu’aucun problème ne soit remonté pour un critère RGAA donné ne signifie pas qu’il n’y a pas de problème d’accessibilité pour ce critère. De même, lorsque nous rapportons une occurrence d’un problème, ce problème peut avoir d’autres occurrences. N’hésitez pas à vérifier de manière exhaustive l’accessibilité de votre site conformément au référentiel <a href="https://accessibilite.public.lu/fr/rgaa4.1/index.html">RGAA</a>.</p>
 
-<h2>Échantillon de pages et référentiel</h2>
+<h2 id="echantillon">Échantillon de pages et référentiel</h2>
 <p>Voici les pages qui ont été évaluées lors de cet audit :</p>
 <ul>
     <% info.pages.forEach(p => { %>
@@ -16,24 +16,24 @@
 <p>Référentiel : <a href="https://accessibilite.public.lu/fr/rgaa4.1/index.html">RGAA v4.1</a></p>
 
 <% if (!declaration) { %>
-    <h2>Déclaration sur l'accessibilité</h2>
-<p>Nous n'avons pas trouvé sur votre site de <strong>déclaration sur l'accessibilité</strong>. Celle-ci est obligatoire d'après l'article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Cette déclaration s'effectue après avoir réalisé un audit de conformité basé sur le <a href="https://accessibilite.public.lu/fr/rgaa4.1/index.html">RGAA</a>. Pour créer votre déclaration sur base des résultats d'un audit de conformité, vous pouvez utiliser le <a href="https://accessibilite.public.lu/fr/tools/decla.html">formulaire disponible à cet effet sur accessibilite.lu</a>. Une fois la déclaration d'accessibilité publiée, vous avez 30 jours pour en informer le SIP par mail à l'adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a></p>. 
+    <h2 id="declaration">Déclaration sur l'accessibilité</h2>
+<p>Nous n'avons pas trouvé sur votre site de <strong>déclaration sur l'accessibilité</strong>. Celle-ci est obligatoire d'après l'article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Cette déclaration s'effectue après avoir réalisé un audit de conformité basé sur le <a href="https://accessibilite.public.lu/fr/rgaa4.1/index.html">RGAA</a>. Pour créer votre déclaration sur base des résultats d'un audit de conformité, vous pouvez utiliser le <a href="https://accessibilite.public.lu/fr/tools/decla.html">formulaire disponible à cet effet sur accessibilite.lu</a>. Une fois la déclaration d'accessibilité publiée, vous avez 30 jours pour en informer le SIP par mail à l'adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
 <% } %>
 
 <% if (docs !== undefined && (docs['pdf-exempt'] >= 50 || docs['files'] >= 100)) { %>
 
-    <h2>Documents bureautiques en téléchargement</h2>
+    <h2 id="documents-bureautiques">Documents bureautiques en téléchargement</h2>
 
     <p>Nous avons téléchargé et analysé l'accessibilité d'un échantillon de <%= docs['files'] %> fichiers bureautiques en téléchargement sur votre site.
     La note globale de l'audit présentée dans la section "Appréciation générale", doit être nuancée au vu des points suivants&nbsp;: </p>
     
     <% if (docs['pdf-exempt'] >= 50) { %>
-    <p>Un nombre important de contenus dérogés impacte la pertinence des résultats de l'audit (la liste des dérogations prévues par la loi est disponible sur <a href="https://accessibilite.public.lu/fr/obligations.html#contenus-exempt%C3%A9s">la page "Obligations" du site accessibilite.lu</a>). Votre site contient un grand nombre de contenus dérogés. En effet, nous avons détecté un nombre important de fichiers PDF publiés avant le 23 septembre 2018 (soit <%= docs['pdf-exempt'] %> fichiers). Bien que ces fichiers soient exemptés d'obligation de mise en accessibilité par la loi du 28 mai 2019, nous vous recommandons de les rendre accessibles, sans quoi une part importante du contenu mis à disposition sur votre site ne pourra être consulté par les personnes en situation de handicap.</p> 
+    <p>Un nombre important de contenus dérogés impacte la pertinence des résultats de l'audit (la liste des dérogations prévues par la loi est disponible sur <a href="https://accessibilite.public.lu/fr/obligations.html#contenus-exempt%C3%A9s">la page "obligations" du site accessibilite.lu</a>). Votre site contient un grand nombre de contenus dérogés. En effet, nous avons détecté un nombre important de fichiers PDF publiés avant le 23 septembre 2018 (soit <%= docs['pdf-exempt'] %> fichiers). Bien que ces fichiers soient exemptés d'obligation de mise en accessibilité par la loi du 28 mai 2019, nous vous recommandons de les rendre accessibles, sans quoi une part importante du contenu mis à disposition sur votre site ne pourra être consulté par les personnes en situation de handicap.</p> 
     <% } %>
 
     <% if (docs['files'] >= 100) { %>
     <p>Nous avons détecté une quantité importante de documents bureautiques en téléchargement, qui peuvent avoir un impact négatif sur l'accessibilité globale de votre site. Sur l'échantillon de fichiers analysé, <%= docs['pcent-pdf'] %> % sont des documents PDF et <%= docs['pcent-form'] %> % sont des formulaires PDF. Le format PDF est en général moins accessible que les pages Web et que les documents Office (.docx, .pptx, etc.); l'accessibilité des formulaires est particulièrement importante dans la mesure où ils sont en général nécessaires à la réalisation de procédures administratives.</p>
-    <p>Sur les fichiers PDF qui entrent dans le cadre de la loi (publication après le 23 septembre 2018) issus de l'échantillon, <%= docs['pcent-pdf-pb-access'] %> % ont au moins un problème d'accessibilité (ex: absence de titre, absence de langue par défaut, absence de <span lang="en">bookmarks</span>)<% if (docs['pcent-pdf-blocking-pb-access'] != 0) { %> (et <%= docs['pcent-pdf-blocking-pb-access'] %> % ont un problème d'accessibilité grave, qui empêche totalement l'accès au contenu du document par les utilisateurs (ex: fichier non taggué, fichier protégé, document scanné)<% } %>. Ces informations sont données à titre indicatif, car nous n'avons pas vérifié la présence d'une alternative accessible.</p>
+    <p>Sur les fichiers PDF qui entrent dans le cadre de la loi (publication après le 23 septembre 2018) issus de l'échantillon, <%= docs['pcent-pdf-pb-access'] %> % ont au moins un problème d'accessibilité (ex: absence de titre, absence de langue par défaut, absence de <span lang="en">bookmarks</span>)<% if (docs['pcent-pdf-blocking-pb-access'] != 0) { %> et <%= docs['pcent-pdf-blocking-pb-access'] %> % ont un problème d'accessibilité grave, qui empêche totalement l'accès au contenu du document par les utilisateurs (ex: fichier non taggué, fichier protégé, document scanné)<% } %>. Ces informations sont données à titre indicatif, car nous n'avons pas vérifié la présence d'une alternative accessible.</p>
     <% } %>
     
     <p>Pour information, le SIP met à disposition une liste de <a href="https://accessibilite.public.lu/fr/rgaa4.1/files/liste-criteres-documents-bureautiques-telechargement-RGAA.docx">critères d'accessibilité pour les documents bureautiques en téléchargement</a>. Pour chaque document bureautique en téléchargement, vous pouvez soit le rendre accessible en respectant les critères mentionnés précédemment, soit proposer une alternative accessible, sous la forme d'une page Web ou d'un document Office (.docx, .pptx, etc.) proposant les mêmes informations.</p>
