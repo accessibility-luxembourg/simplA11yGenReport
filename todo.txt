@@ -1,5 +1,5 @@
 
-- voir si possible de set la langue et le titre
+- voir si possible de set la langue et le titre (avec pdf-lib? ou un fix de pagedjs-cli)
 
 Plus tard: 
 - générer des bookmarks, voir bug https://gitlab.pagedmedia.org/tools/pagedjs/issues/346
