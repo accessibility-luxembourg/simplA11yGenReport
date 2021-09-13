@@ -15,10 +15,11 @@ const md = MarkdownIt({
     typographer: true,
     quotes: ['«\xA0', '\xA0»', '‹\xA0', '\xA0›']
   }).use(require('markdown-it-attrs'))
+
 const mdForExcel = MarkdownIt({
     html: false,
     linkify: true,
-  })
+  }).use(require('markdown-it-attrs'))
 
 function cleanupSolutions(solutions) {
     Object.keys(solutions).forEach((topicIdx) => {
