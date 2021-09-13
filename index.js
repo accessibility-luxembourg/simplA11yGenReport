@@ -19,7 +19,7 @@ const md = MarkdownIt({
 const mdForExcel = MarkdownIt({
     html: false,
     linkify: true,
-  }).use(require('markdown-it-attrs'))
+  })
 
 function cleanupSolutions(solutions) {
     Object.keys(solutions).forEach((topicIdx) => {
