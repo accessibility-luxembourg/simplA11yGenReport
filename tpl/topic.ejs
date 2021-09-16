@@ -1,6 +1,7 @@
 <div class="topic">
     <div class="nobreak">
-        <h3 id="<%= topic.name.replace(/\s+/g, '-').toLowerCase() %>"><%= topic.name %></h3>
+        <h3 id="<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>"><%= topic.name %></h3>
+        <a class="toc" href="#<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>"><%= topic.name %></a>
         <div class="desc"><%- md.render(topic.desc) %></div>
     </div>
     <% 

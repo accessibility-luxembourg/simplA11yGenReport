@@ -20,6 +20,6 @@ div.topic > div.nobreak > div.desc > p {
     margin-bottom: 0;
 }
 
-.logo {
+.logo,.toc {
     display: none;
 }

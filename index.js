@@ -55,6 +55,10 @@ for (let pageIdx = 1; pageIdx < 4; pageIdx++) {
         const status = getFieldVal(sheet, 'D', i, 'v')  
         const derogation = getFieldVal(sheet, 'E', i, 'v')
         const comment =  getFieldVal(sheet, 'F', i, 'w')
+        if (status == 'NT') {
+            console.log('contains untested criterias');
+            exit(1);
+        }
         if (status == 'NC' && derogation == 'N') {
             if (!topicsToDisplay.includes(topic)) {
                 topicsToDisplay.push(topic)
