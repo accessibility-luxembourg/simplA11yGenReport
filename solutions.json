@@ -99,7 +99,7 @@
             "criterias": ["5.6", "5.7"], 
             "title": "Déclaration des entêtes et liaison des cellules d'entêtes et de données",
             "desc": [
-                "Les utilisateurs de lecteurs d'écran ou de loupe d'écran vocalisée ne peuvent percevoir un tableau dans son ensemble. Il est donc important de leur communiquer des informations de contexte sur chaque cellule, notamment à quelles entêtes chaque cellule est-elle reliée. Ces informations peuvent être données via des structures HTML dédiées. Les entêtes de colonnes et de lignes doivent notamment être déclarées via la balise `<th>`.",
+                "Les utilisateurs de lecteurs d'écran ou de loupe d'écran vocalisée ne peuvent percevoir un tableau dans son ensemble. Il est donc important de leur communiquer des informations de contexte sur chaque cellule, notamment à quelles entêtes chaque cellule est reliée. Ces informations peuvent être données via des structures HTML dédiées. Les entêtes de colonnes et de lignes doivent notamment être déclarées via la balise `<th>`.",
                 "",
                 "Dans un tableau de données simple, où chaque entête est valable pour l'ensemble de la ligne ou de la colonne, la relation entre les cellules et les entêtes doit être définie en appliquant un attribut `scope=col` à toutes les entêtes de colonnes et `scope=row` à toutes les entêtes de lignes.",
                 "",
@@ -119,8 +119,8 @@
             "desc": [
                 "Un lien doit toujours avoir un intitulé. Celui-ci permet aux utilisateurs de comprendre la destination du lien. La présence d'intitulés sur tous les liens est particulièrement importante pour les aveugles et malvoyants. Si un lien n'a pas d'intitulé, les lecteurs d'écran vont le lire simplement \"lien\" sans annoncer sa destination.",
                 "",
-                "- Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image.  (Pour une image *bitmap*{lang=en}, son attribut `alt` doit contenir l'intitulé du lien. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=img` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby`).",
-                "- Lorsqu'un lien contient du texte et des images, l'intitulé du lien correspond à la concaténation des intitulés de ces différents éléments contenus dans le lien."   
+                "- Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image. Pour une image *bitmap*{lang=en}, son attribut `alt` doit contenir l'intitulé du lien (ex: `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"facebook\" /></a>`). Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=img` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby` (ex: `<a href=\"https://facebook.com\"><svg role=\"img\" aria-label=\"facebook\">...</svg></a>`).",
+                "- Lorsqu'un lien contient du texte et des images, l'intitulé du lien correspond à la concaténation des intitulés de ces différents éléments contenus dans le lien. (ex: pour `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"logo facebook\" /> Facebook</a>` l'intitulé du lien est \"logo facebook facebook\")"   
             ]
         }        
     ],
