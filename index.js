@@ -56,9 +56,14 @@ for (let pageIdx = 1; pageIdx < 4; pageIdx++) {
         const derogation = getFieldVal(sheet, 'E', i, 'v')
         const comment =  getFieldVal(sheet, 'F', i, 'w')
         if (status == 'NT') {
-            console.log('contains untested criterias');
+            console.log(process.argv[2], 'page '+ pageIdx, 'contains untested criterias');
             exit(1);
         }
+        if (status == 'NC' && comment.trim().length == 0) {
+            console.log(process.argv[2], 'page '+ pageIdx, 'comment is empty for criteria ' + criteria);
+            exit(1);            
+        }
+
         if (status == 'NC' && derogation == 'N') {
             if (!topicsToDisplay.includes(topic)) {
                 topicsToDisplay.push(topic)
@@ -83,6 +88,8 @@ const info = {}
 info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
 info['date'] = getFieldVal(workbook.Sheets['Échantillon'], 'A', '3', 'v')
 info['score'] = getFieldVal(workbook.Sheets['Résultats'], 'B', '4', 'v')
+
+// console.log(process.argv[2], info['score'])
 info['pages'] = []
 for (let i=0; i<3; i++) {
 

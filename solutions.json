@@ -38,7 +38,7 @@
             "criterias": ["3.2"], 
             "title": "Contrastes des textes",
             "desc": [
-                "Les contrastes de couleurs sont importants pour plusieurs déficiences visuelles comme les grands malvoyants ou les personnes ayant des problèmes de perception des couleurs.",
+                "Les contrastes de couleurs sont importants pour plusieurs types de déficiences visuelles comme celles des grands malvoyants ou des personnes ayant des problèmes de perception des couleurs.",
                 "Les contrastes minimaux d'un texte sur le fond de page sont définis par le RGAA comme suit :",
                 "",
                 "- Pour un texte sans effet de graisse",
@@ -170,7 +170,7 @@
         {
             "criterias": ["10.7"], 
             "title": "Visibilité du focus",
-            "desc": "Les handicapés moteurs qui naviguent au clavier utilisent l'[indicateur de focus](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#prise-de-focus) fourni par le site sur les éléments interactifs pour savoir où ils se situent dans la page. L'indicateur de focus se déplace via les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>. L'indicateur de focus par défaut peut être désactivé via CSS, dans ce cas il est nécessaire de changer le style de l'élément interactif pour rendre l'indicateur de focus visible (sa couleur devra avoir un contraste minimum de 3:1 avec l'arrière plan contigu)."         
+            "desc": "Les handicapés moteurs qui naviguent au clavier utilisent l'[indicateur de focus](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#prise-de-focus) fourni par le site sur les éléments interactifs pour savoir où ils se situent dans la page. L'indicateur de focus se déplace via les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>. L'indicateur de focus par défaut peut être désactivé via CSS, dans ce cas il est nécessaire de changer le style de l'élément interactif pour rendre l'indicateur de focus visible (sa couleur devra avoir un contraste minimum de 3:1 avec l'arrière-plan contigu)."         
         },
         {
             "criterias": ["10.8"], 

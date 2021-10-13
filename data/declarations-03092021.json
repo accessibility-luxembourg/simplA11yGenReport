@@ -86,5 +86,6 @@
     "transports.public.lu": true,
     "travaux.public.lu": true,
     "work-luxembourg.public.lu": true,
-    "test.public.lu": false
+    "test.public.lu": false,
+    "zesumme-vereinfachen.lu": false
 }
