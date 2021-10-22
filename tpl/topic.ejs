@@ -1,8 +1,8 @@
 <div class="topic">
     <div class="nobreak">
-        <h3 id="<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>"><%= topic.name %></h3>
+        <h3 id="<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>">Thématique "<%= topic.name.toLowerCase() %>"</h3>
         <a class="toc" href="#<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>"><%= topic.name %></a>
-        <div class="desc"><%- md.render(topic.desc) %></div>
+        <div class="desc"><h4>Recommandations générales</h4> <%- md.render(topic.desc) %></div>
     </div>
     <% 
         const sol = solutions[topic.num]
@@ -13,7 +13,7 @@
             if (shortList.length != 0) {
             %>
             <div class="nobreak">
-            <h4><%- md.renderInline(s.title) %></h4>
+            <h4>Cas rencontré&nbsp;: <%- md.renderInline(s.title) %></h4>
                 <%- md.render(s.desc) %>
             </div>
             <div class="nobreak">

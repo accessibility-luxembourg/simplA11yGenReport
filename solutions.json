@@ -2,13 +2,13 @@
     "1": [
         {
             "criterias": ["1.1", "1.3"], 
-            "title": "Images porteuses d'information",
-            "desc": "Les images porteuses d'information doivent avoir une alternative textuelle qui sera restituée aux personnes utilisant un lecteur d'écran, aveugles et grands malvoyants. Cette alternative textuelle doit fournir l'information véhiculée par l'image, il ne s'agit pas d'une description de l'image. Pour une image *bitmap*{lang=en}, son attribut `alt` doit contenir cette alternative textuelle. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=img` et son alternative textuelle pourra être fournie via les attributs `aria-label` ou `aria-labelledby`."
+            "title": "images porteuses d'information",
+            "desc": "Les images porteuses d'information doivent avoir une alternative textuelle qui sera restituée aux personnes utilisant un lecteur d'écran, aveugles et grands malvoyants. Cette alternative textuelle doit fournir l'information véhiculée par l'image, il ne s'agit pas d'une description de l'image. Pour une image *bitmap*{lang=en}, son attribut `alt` doit contenir cette alternative textuelle. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=\"img\"` et son alternative textuelle pourra être fournie via les attributs `aria-label` ou `aria-labelledby`."
         },
         {
             "criterias": ["1.2"], 
-            "title": "Images de décoration",
-            "desc": "Les [images de décoration](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#image-de-decoration) ne doivent pas avoir d'alternative textuelle et doivent être ignorées correctement par les technologies d'assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d'écran (aveugles et grands malvoyants). Pour une image *bitmap*{lang=en}, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `aria-hidden=true`."
+            "title": "images de décoration",
+            "desc": "Les [images de décoration](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#image-de-decoration) ne doivent pas avoir d'alternative textuelle et doivent être ignorées correctement par les technologies d'assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d'écran (aveugles et grands malvoyants). Pour une image *bitmap*{lang=en}, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `aria-hidden=\"true\"`."
         },
         {
             "criterias": ["1.4", "1.5"], 
@@ -17,26 +17,26 @@
         },
         {
             "criterias": ["1.6", "1.7"], 
-            "title": "Images porteuses d'information complexes",
+            "title": "images porteuses d'information complexes",
             "desc": "Certaines images porteuses d'informations sont particulièrement complexes, par exemple lorsqu'elles présentent des graphiques, schémas, cartes, etc. Dans ce cas, ces images nécessitent une description détaillée adjacente à l'image afin de permettre aux personnes aveugles et dyslexiques d'accéder à toutes les informations véhiculées par l'image. Pour mettre à disposition cette description détaillée, plusieurs solutions sont possibles. Le texte peut être adjacent à l'image dans la même page ou on peut placer un lien adjacent à l'image qui mène à une page où se trouve la description. Le texte peut aussi être inclus dans un composant permettant de le masquer et de l'afficher sur demande, au clic d'un bouton \"afficher la description de l'image\" (via le *design pattern*{lang=en} [\"disclosure\"](https://www.w3.org/TR/wai-aria-practices-1.1/#disclosure){lang=en})."            
         }
     ],
     "2": [
         {
             "criterias": ["2.1"], 
-            "title": "Titres de cadres",
+            "title": "titres de cadres",
             "desc": "Les titres de cadres sont utiles à la compréhension de la structure de la page et des contenus pour les personnes aveugles. Tout cadre (élément `<iframe>` ou `<frame>`) doit avoir un titre fourni via son attribut `title`. Ce titre doit être pertinent, il doit représenter le contenu du cadre."            
         }        
     ],
     "3": [
         {
             "criterias": ["3.1"], 
-            "title": "Informations données uniquement par la couleur",
+            "title": "informations données uniquement par la couleur",
             "desc": "Ce type d'information est un problème pour les personnes déficientes visuelles, aveugles ou par exemple les personnes qui ne voient pas certaines couleurs ou ne perçoivent simplement pas les couleurs. Pour chaque information véhiculée par la couleur, il est nécessaire de mettre en place une alternative, comme par exemple un changement de style (graisse du texte, taille du texte, soulignement, etc.)"         
         },
         {
             "criterias": ["3.2"], 
-            "title": "Contrastes des textes",
+            "title": "contrastes des textes",
             "desc": [
                 "Les contrastes de couleurs sont importants pour plusieurs types de déficiences visuelles comme celles des grands malvoyants ou des personnes ayant des problèmes de perception des couleurs.",
                 "Les contrastes minimaux d'un texte sur le fond de page sont définis par le RGAA comme suit :",
@@ -56,7 +56,7 @@
     "4": [
         {
             "criterias": ["4.1", "4.2"], 
-            "title": "Transcription textuelle et audiodescription",
+            "title": "transcription textuelle et audiodescription",
             "desc": [ 
                 "Si une vidéo possède des textes incrustés ou des informations sonores (ex: personnes qui parlent sur la piste sonore) alors il est nécessaire de fournir une transcription textuelle. De même pour un média audio seulement qui est porteur d'information (ex: podcast), une transcription textuelle est nécessaire.",
                 "L'absence de transcription textuelle sur de tels médias va empêcher l'accès à l'information à de nombreux utilisateurs comme les aveugles, les malvoyants, les sourds, les malentendants, les handicapés moteurs et cognitifs.",
@@ -67,17 +67,17 @@
         },
         {
             "criterias": ["4.3", "4.4"], 
-            "title": "Sous-titres",
+            "title": "sous-titres",
             "desc": "Les vidéos sur ce site doivent avoir des sous-titres. Il existe deux types de sous-titres : les sous-titres de traduction et les sous-titres pour sourds et malentendants. Il est nécessaire de fournir ici des sous-titres pour sourds et malentendants. Ceux-ci doivent notamment fournir en plus des dialogues toutes les informations sur les éléments sonores nécessaires pour comprendre l'action. Les sous-titres doivent être correctement synchronisés avec la vidéo."         
         },
         {
             "criterias": ["4.8", "4.9"], 
-            "title": "Médias non-temporels",
+            "title": "médias non-temporels",
             "desc": "Un média non-temporel est une application interactive insérée dans une page web. Exemples : carte interactive, diaporama, jeu vidéo. Chaque média non-temporel doit avoir une alternative accessible. Cette alternative doit permettre d'accéder au même contenu et à des fonctionnalités similaires. Elle peut être disponible directement dans la page ou dans une autre page par l'intermédiaire d'un lien adjacent au média non-temporel."         
         },
         {
             "criterias": ["4.10"], 
-            "title": "Son déclenché automatiquement",
+            "title": "son déclenché automatiquement",
             "desc": [
                 "Tout son déclenché automatiquement (sans action de l'utilisateur) est autorisé si l'une de ces conditions est remplie :",
                 "",
@@ -90,18 +90,18 @@
         }, 
         {
             "criterias": ["4.11"], 
-            "title": "Contrôle des lecteurs vidéo au clavier",
-            "desc": "Si les vidéos présentes sur le site sont dérogées car publiées avant le 23 septembre 2020, cette dérogation ne s'applique pas au lecteur vidéo lui-même qui se doit d'être accessible. La consultation de chaque média temporel doit en effet être contrôlable par le clavier et tout dispositif de pointage. Cela permet aux personnes ayant un handicap moteur d'accéder à ces contenus."         
+            "title": "contrôle des lecteurs vidéo au clavier",
+            "desc": "La consultation de chaque vidéo doit être contrôlable par le clavier et tout dispositif de pointage. Cela permet aux personnes ayant un handicap moteur d'accéder à ces contenus. Si les vidéos présentes sur le site sont dérogées car publiées avant le 23 septembre 2020, cette dérogation ne s'applique pas au lecteur vidéo lui-même. Celui-ci se doit d'être accessible quelle que soit la date de publication de la vidéo."         
         }                   
     ],
     "5": [
         {
             "criterias": ["5.6", "5.7"], 
-            "title": "Déclaration des entêtes et liaison des cellules d'entêtes et de données",
+            "title": "déclaration des entêtes et liaison des cellules d'entêtes et de données",
             "desc": [
                 "Les utilisateurs de lecteurs d'écran ou de loupe d'écran vocalisée ne peuvent percevoir un tableau dans son ensemble. Il est donc important de leur communiquer des informations de contexte sur chaque cellule, notamment à quelles entêtes chaque cellule est reliée. Ces informations peuvent être données via des structures HTML dédiées. Les entêtes de colonnes et de lignes doivent notamment être déclarées via la balise `<th>`.",
                 "",
-                "Dans un tableau de données simple, où chaque entête est valable pour l'ensemble de la ligne ou de la colonne, la relation entre les cellules et les entêtes doit être définie en appliquant un attribut `scope=col` à toutes les entêtes de colonnes et `scope=row` à toutes les entêtes de lignes.",
+                "Dans un tableau de données simple, où chaque entête est valable pour l'ensemble de la ligne ou de la colonne, la relation entre les cellules et les entêtes doit être définie en appliquant un attribut `scope=\"col\"` à toutes les entêtes de colonnes et `scope=\"row\"` à toutes les entêtes de lignes.",
                 "",
                 "Dans un [tableau de données complexe](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#tableau-de-donnees-complexe), chaque entête doit avoir un identifiant déclaré via l'attribut `id` et chaque cellule doit faire référence à ces entêtes via l'attribut `headers` (liste d'identifiants séparés par des espaces)."  
             ]       
@@ -110,16 +110,16 @@
     "6": [
         {
             "criterias": ["6.1"], 
-            "title": "Pertinence des intitulés",
+            "title": "pertinence des intitulés",
             "desc": "Chacun doit pouvoir comprendre aisément la fonction et la destination de chaque lien. Les problèmes rencontrés ici le sont pour les aveugles, les malvoyants, les handicapés moteurs qui naviguent à la voix et les handicapés cognitifs."         
         },
         {
             "criterias": ["6.2"], 
-            "title": "Présence d'intitulés",
+            "title": "présence d'intitulés",
             "desc": [
                 "Un lien doit toujours avoir un intitulé. Celui-ci permet aux utilisateurs de comprendre la destination du lien. La présence d'intitulés sur tous les liens est particulièrement importante pour les aveugles et malvoyants. Si un lien n'a pas d'intitulé, les lecteurs d'écran vont le lire simplement \"lien\" sans annoncer sa destination.",
                 "",
-                "- Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image. Pour une image *bitmap*{lang=en}, son attribut `alt` doit contenir l'intitulé du lien (ex: `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"facebook\" /></a>`). Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=img` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby` (ex: `<a href=\"https://facebook.com\"><svg role=\"img\" aria-label=\"facebook\">...</svg></a>`).",
+                "- Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image. Pour une image *bitmap*{lang=en}, son attribut `alt` doit contenir l'intitulé du lien (ex: `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"facebook\" /></a>`). Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=\"img\"` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby` (ex: `<a href=\"https://facebook.com\"><svg role=\"img\" aria-label=\"facebook\">...</svg></a>`).",
                 "- Lorsqu'un lien contient du texte et des images, l'intitulé du lien correspond à la concaténation des intitulés de ces différents éléments contenus dans le lien. (ex: pour `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"logo Facebook\" /> Facebook</a>` l'intitulé du lien est \"logo facebook facebook\". Dans cet exemple, cet intitulé n'est pas pertinent et l'alternative de l'image doit être vide.)"   
             ]
         }        
@@ -127,19 +127,19 @@
     "7": [
         {
             "criterias": ["7.3"], 
-            "title": "Éléments interactifs inaccessibles au clavier",
-            "desc": "Les composants riches développés en JavaScript doivent respecter des modèles de conception spécifiques pour pouvoir être considérés comme accessibles (modèles de conception décrits dans le document [\"WAI-ARIA Authoring practices\"](https://www.w3.org/TR/wai-aria-practices-1.1/){lang=en}). Sans cela le composant ne sera pas correctement restitué aux utilisateurs de lecteurs d'écran qui ne sauront pas comment l'utiliser. Ces composants doivent notamment utiliser des interactions au clavier spécifiques, sans lesquelles ces composants seront inutilisables pour les utilisateurs de la navigation au clavier."         
+            "title": "éléments interactifs inaccessibles au clavier",
+            "desc": "Les composants riches développés en JavaScript doivent respecter des modèles de conception spécifiques pour pouvoir être considérés comme accessibles (modèles de conception décrits dans le document [\"WAI-ARIA Authoring practices\"](https://www.w3.org/TR/wai-aria-practices-1.1/){lang=en}). Sans cela le composant ne sera pas correctement restitué aux utilisateurs de lecteurs d'écran qui ne sauront pas comment l'utiliser. Ces composants doivent notamment utiliser des interactions au clavier spécifiques, sans lesquelles ils seront inutilisables pour les utilisateurs de la navigation au clavier."         
         }         
     ],
     "8": [
         {
             "criterias": ["8.1", "8.2"], 
-            "title": "Validité du code source de la page",
+            "title": "validité du code source de la page",
             "desc": "Les lecteurs d'écran s'appuient sur la sémantique des balises HTML pour restituer le contenu et naviguer, si la syntaxe HTML n'est pas respectée ou si les balises sont détournées, cela peut avoir un impact sur la navigation qui peut devenir inopérante et la restitution qui peut devenir incompréhensible. Pour vérifier la validité de la syntaxe HTML, on peut utiliser le [validateur HTML du W3C](https://validator.w3.org/nu/) avec le *bookmarklet*{lang=en} [\"WCAG 2.1 parsing error\"](https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/){lang=en}. Ce *bookmarklet*{lang=en} filtre les résultats et ne montre que les erreurs ayant un impact sur l'accessibilité."         
         }, 
         {
             "criterias": ["8.3", "8.4", "8.7", "8.8"], 
-            "title": "Indication de langue",
+            "title": "indication de langue",
             "desc": [
                 "Les lecteurs d'écran utilisent les indications de langue pour vocaliser correctement le contenu. La langue principale de la page est spécifiée via l'attribut `lang` sur l'élément `<html>`. Lorsqu'un mot d'origine étrangère est inséré dans du contenu écrit dans la langue principale de la page, il doit posséder si nécessaire une indication de langue. L'indication de langue se fait par l'intermédiaire de l'attribut `lang`.",
                 "Il existe néanmoins des exceptions :",
@@ -150,65 +150,65 @@
         }, 
         {
             "criterias": ["8.5", "8.6"], 
-            "title": "Titre de page",
+            "title": "titre de page",
             "desc": "Le titre de page est la première information restituée aux aveugles et grands malvoyants, elle leur permet de confirmer que le lien sur lequel ils viennent de cliquer les a bien menés au bon endroit, il permet aussi de retrouver une page dans l'historique, les *bookmarks*{lang=en} ou les onglets ouverts. Tout changement significatif de l'état de la page doit être repris dans le titre de la page (pagination, erreur, étape d'un workflow, etc.). "         
         }         
     ],
     "9": [
         {
             "criterias": ["9.1"], 
-            "title": "Titres",
-            "desc": "Les [titres](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#titre) permettent aux utilisateurs de comprendre la structure du document. Ils permettent aussi aux utilisateurs aveugles, malvoyants et handicapés moteurs de naviguer de titre en titre dans la page. Il est donc important d'avoir une bonne hiérarchie de titres dans une page. Cette hiérarchie est similaire à un plan de document. La vérification de la hiérarchie de titres peut se faire via l'extension de navigateur [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/){lang=en}."
+            "title": "titres",
+            "desc": "Les [titres](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#titre) permettent aux utilisateurs de comprendre la structure du document. Ils permettent aussi aux utilisateurs aveugles, malvoyants et handicapés moteurs de naviguer de titre en titre dans la page. Il est donc important d'avoir une bonne hiérarchie de titres dans une page. Cette hiérarchie est similaire à un sommaire de document. La vérification de la hiérarchie de titres peut se faire via l'extension de navigateur [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/){lang=en}."
         },
         {
             "criterias": ["9.2"], 
-            "title": "Structure du document HTML5",
+            "title": "structure du document HTML5",
             "desc": "La structuration du document HTML5 permet aux aveugles, grands malvoyants et handicapés moteurs de naviguer très rapidement entre les zones principales de la page (header, footer, zone de contenu principale, navigation, ...)"         
         }                 
     ],
     "10": [
         {
             "criterias": ["10.7"], 
-            "title": "Visibilité du focus",
+            "title": "visibilité du focus",
             "desc": "Les handicapés moteurs qui naviguent au clavier utilisent l'[indicateur de focus](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#prise-de-focus) fourni par le site sur les éléments interactifs pour savoir où ils se situent dans la page. L'indicateur de focus se déplace via les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>. L'indicateur de focus par défaut peut être désactivé via CSS, dans ce cas il est nécessaire de changer le style de l'élément interactif pour rendre l'indicateur de focus visible (sa couleur devra avoir un contraste minimum de 3:1 avec l'arrière-plan contigu)."         
         },
         {
             "criterias": ["10.8"], 
-            "title": "Contenus cachés",
-            "desc": "Tout contenu dans la page peut être ignoré par les technologies d'assistance (notamment en utilisant l'attribut `aria-hidden=true`). Si un contenu est visible mais ignoré par les technologies d'assistance, les utilisateurs de ces technologies d'assistance ne pourront pas prendre connaissance du contenu ni interagir avec les éventuels éléments interactifs qu'ils pourraient contenir. La visibilité d'un contenu doit donc être cohérente pour tous les utilisateurs du site, qu'ils utilisent ou non une technologie d'assistance."         
+            "title": "contenus cachés",
+            "desc": "Tout contenu dans la page peut être ignoré par les technologies d'assistance (notamment en utilisant l'attribut `aria-hidden=\"true\"`). Si un contenu est visible mais ignoré par les technologies d'assistance, les utilisateurs de ces technologies d'assistance ne pourront pas prendre connaissance du contenu ni interagir avec les éventuels éléments interactifs qu'ils pourraient contenir. La visibilité d'un contenu doit donc être cohérente pour tous les utilisateurs du site, qu'ils utilisent ou non une technologie d'assistance."         
         }, 
         {
             "criterias": ["10.9", "10.10"], 
-            "title": "Information donnée par la forme, la taille ou la position",
+            "title": "information donnée par la forme, la taille ou la position",
             "desc": "Ce type d'information est un problème pour les personnes aveugles et grands malvoyants. Pour chaque information véhiculée par la forme, la taille ou la position, il est nécessaire de mettre en place une alternative."         
         }, 
         {
             "criterias": ["10.14"], 
-            "title": "Contenus additionnels au survol et au focus",
+            "title": "contenus additionnels au survol et au focus",
             "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex: *tooltips*{lang=en}, menus déroulants). Tout élément qui apparait au survol, doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."         
         }
     ],
     "11": [
         {
             "criterias": ["11.1", "11.2", "11.5", "11.6", "11.7"], 
-            "title": "Identification des champs, des contrôles et des regroupements de formulaires",
+            "title": "identification des champs, des contrôles et des regroupements de formulaires",
             "desc": "L'identification de ces éléments fournit aux aveugles et grands malvoyants les informations nécessaires pour pouvoir remplir un formulaire. Les handicapés moteurs utilisant un système de reconnaissance vocale s'appuient aussi sur ces éléments pour se déplacer dans les différents [champs](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#champ-de-saisie-de-formulaire) et actionner les boutons. Pour associer une [étiquette](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#etiquette-de-champ-de-formulaire) (`<label>`) à un champ de formulaire on peut utiliser l'attribut `for` de l'étiquette dont la valeur doit être identique à celle de l'attribut `id` du champ. Les [champs de même nature](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#champs-de-meme-nature) doivent être regroupés, cela peut être réalisé via l'élément `<fieldset>` auquel on doit fournir une [légende](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#legende) via l'élément `<legend>`. "         
         },
         {
             "criterias": ["11.9"], 
-            "title": "Intitulés de boutons pertinents",
+            "title": "intitulés de boutons pertinents",
             "desc": "Les boutons doivent avoir des intitulés pertinents, qui communiquent l'action réalisée à l'activation. Ces informations sont particulièrement importantes pour les déficients visuels et cognitifs."         
         },
         {
             "criterias": ["11.10"], 
-            "title": "Contrôle et aide à la saisie",
+            "title": "contrôle et aide à la saisie",
             "desc": "Que ce soit pour les handicapés cognitifs ou pour les aveugles et déficients visuels, il est nécessaire d'expliciter les formats de données attendus dans les consignes et les messages d'erreur, ainsi que le caractère obligatoire de la saisie de certains champs."         
         }
     ],
     "12": [
         {
             "criterias": ["12.6"], 
-            "title": "*Landmarks*{lang=en} ARIA",
+            "title": "*landmarks*{lang=en} ARIA",
             "desc": [ 
                 "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone :", 
                 "- `role=banner` pour l'entête,",
@@ -220,34 +220,34 @@
         },
         {
             "criterias": ["12.7"], 
-            "title": "Liens d'accès rapide",
+            "title": "liens d'accès rapide",
             "desc": "Les [liens d'accès rapide](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#liens-d-evitement-ou-d-acces-rapide) sont des liens présents en début de page et permettent aux utilisateurs qui naviguent au clavier et aux utilisateurs malvoyants qui utilisent une loupe d'écran d'éviter des zones de contenus redondants comme l'entête et la navigation. Il est indispensable d'avoir au moins un lien d'accès rapide vers la zone de contenu principale (`<main>`). Ces liens peuvent être positionnés hors écran et apparaître à la prise de focus."         
         }, 
         {
             "criterias": ["12.8"], 
-            "title": "Ordre de tabulation",
-            "desc": "L'[ordre de tabulation](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#ordre-de-tabulation), c'est-à-dire l'ordre dans lequel le focus se déplace lorsqu'on utilise les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd> doit être cohérent. Si l'ordre de tabulation est incohérent, les aveugles, les déficients visuels, les handicapés moteurs et handicapés cognitifs auront de grandes difficultés à consulter la page."         
+            "title": "ordre de tabulation",
+            "desc": "L'[ordre de tabulation](https://accessibilite.public.lu/fr/rgaa4.1/glossaire.html#ordre-de-tabulation), c'est-à-dire l'ordre dans lequel le focus se déplace lorsqu'on utilise les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd> doit être cohérent. Si l'ordre de tabulation est incohérent, les aveugles, les déficients visuels, les handicapés moteurs et handicapés cognitifs auront de grandes difficultés à naviguer dans la page."         
         },
         {
             "criterias": ["12.11"], 
-            "title": "Contenus additionnels",
-            "desc": "Un exemple de contenu additionnel apparaissant au survol ou à la prise de focus est une *tooltip*{lang=en} personnalisée proposant un lien dans son contenu. Les utilisateurs aveugles et les personnes avec un handicap moteur doivent pouvoir accéder à ces contenus en navigant au clavier."         
+            "title": "contenus additionnels",
+            "desc": "Un exemple de contenu additionnel apparaissant au survol ou à la prise de focus est une *tooltip*{lang=en} personnalisée proposant dans son contenu un élément interactif (ex : un lien). Les utilisateurs aveugles et les personnes avec un handicap moteur doivent pouvoir accéder à ces contenus en navigant au clavier."         
         }
     ],
     "13": [
         {
             "criterias": ["13.1"], 
-            "title": "Contrôle des limites de temps",
+            "title": "contrôle des limites de temps",
             "desc": "L'utilisation de technologies d'assistance impacte directement la rapidité de lecture et d'utilisation d'un site. Dans ces conditions, l'absence de contrôle des limites de temps peut rendre impossible la lecture ou la réalisation de tâches. Les utilisateurs impactés sont les aveugles et déficients visuels, les handicapés moteurs et les handicapés mentaux."         
         },
         {
             "criterias": ["13.7"], 
-            "title": "Effets de flash",
+            "title": "effets de flash",
             "desc": "Les effets de flash sont susceptibles de causer des crises d'épilepsie."         
         },
         {
             "criterias": ["13.8"], 
-            "title": "Contenus en mouvement ou clignotants",
+            "title": "contenus en mouvement ou clignotants",
             "desc": "Ces contenus posent problème aux utilisateurs avec des difficultés de lecture ou des troubles de l'attention. Les utilisateurs doivent avoir la possibilité de mettre le mouvement en pause, ou de masquer le contenu en mouvement."     
         }              
     ]

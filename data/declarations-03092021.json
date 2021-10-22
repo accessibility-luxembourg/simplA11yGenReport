@@ -54,7 +54,7 @@
     "ccss.public.lu": true,
     "cedies.public.lu": true,
     "cnpd.public.lu": true,
-    "covid19.lu": true,
+    "covid19.public.lu": true,
     "cpfec.public.lu": true,
     "demenz.lu": true,
     "echternach.lu": true,
@@ -87,5 +87,6 @@
     "travaux.public.lu": true,
     "work-luxembourg.public.lu": true,
     "test.public.lu": false,
-    "zesumme-vereinfachen.lu": false
+    "zesumme-vereinfachen.lu": false,
+    "abp.gouvernement.lu": false
 }

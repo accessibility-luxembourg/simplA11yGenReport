@@ -994,3 +994,8 @@ main img{
   margin: 0 .2em .25em -1.6em;
   vertical-align: middle;
 }
+
+.markdown-body .desc h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
