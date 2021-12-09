@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Audit d'accessibilité simplifié du site <%= info.site %></title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="SIP" />
+        <meta name="author" content="" />
         <meta name="subject" content="" />
         <meta name="creator" content="simplA11yGenReport" />
 
@@ -30,7 +30,6 @@
             </div>
             <h1 id="title">Audit d'accessibilité simplifié - <span id="site"><%= info.site %></span></h1>
             <p><%= info.date %></p>
-            <div class="logo"><%- include('logo.ejs') %></div>
         </header>
         <main role="main" id="main" tabindex="-1">
                 <%- include('intro', {info: info}) %>
@@ -39,8 +38,5 @@
                 <%- include('topic', {topic: topic, solutions: solutions, issues: issues}) %>
             <% }) %>
         </main>
-        <footer role="contentinfo">
-            <p>Ce rapport est publié par le <a href="https://sip.gouvernement.lu">service information et presse</a> sous <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode.fr">licence CC0</a>.</p>
-        </footer>
     </body>
 </html>

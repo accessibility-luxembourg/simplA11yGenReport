@@ -35,5 +35,14 @@ You can also generate reports for multiple files. In this case, store all the in
 ```
 The reports will be stored in the ./out folder.
 
+## Configuration
+You can customise the templates to fit your needs.
+Make a copy of the `tpl` folder in the location of your choice and set the `TPL_PATH` environment variable to the path of your custom templates.
+Example: 
+
+```
+export TPL_PATH="../myCustomTemplates"
+```
+
 ## License
 This software is (c) Information and press service of the luxembourgish government and licensed under the MIT license.

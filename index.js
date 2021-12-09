@@ -9,6 +9,11 @@ const statements = require('./data/accessibility-statements.json')
 const docs = require('./data/office-files.json')
 const { exit } = require('process')
 
+let tpl_path = './tpl'
+if (process.env.TPL_PATH) {
+    tpl_path = process.env.TPL_PATH
+}
+
 const md = MarkdownIt({
     html: true,
     linkify: true,
@@ -109,7 +114,7 @@ const docsInfos = docs[siteName]
 
 
 // render issues
-ejs.renderFile('./tpl/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues, declaration: declaration, docs: docsInfos}, function(err, str){
+ejs.renderFile(tpl_path+'/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues, declaration: declaration, docs: docsInfos}, function(err, str){
     if (err !== null) {
         console.log(err)
     }
