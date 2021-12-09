@@ -5,8 +5,8 @@ const workbook = XLSX.readFile(process.argv[2])
 let topics = require('./topics.json')
 const fs = require('fs')
 const p = require('path')
-const declarations = require('./data/declarations-03092021.json')
-const docs = require('./data/docs-bureautiques-03092021.json')
+const statements = require('./data/accessibility-statements.json')
+const docs = require('./data/office-files.json')
 const { exit } = require('process')
 
 const md = MarkdownIt({
@@ -100,11 +100,11 @@ for (let i=0; i<3; i++) {
 }
 
 const siteName = process.argv[2].replace(/^.*\//,'').replace('.xlsx', '')
-if (declarations[siteName] === undefined) {
-    console.log('site not found in declarations: '+ siteName)
+if (statements[siteName] === undefined) {
+    console.log('site not found in statements: '+ siteName)
     exit(1)
 } 
-const declaration = declarations[siteName]
+const declaration = statements[siteName]
 const docsInfos = docs[siteName]
 
 
