@@ -8,7 +8,7 @@ Most of the [accessibility reports](https://data.public.lu/fr/datasets/audits-si
 ## Requirements
 
 In order to be able to run, this tool needs 4 files in the `./data` folder:
-- `statements.json`: a file containing information about the presence of accessibility statements on websites to be controlled. Example: `{ "test.example.org": false, "gouvernement.lu": true}
+- `statements.json`: a file containing information about the presence of accessibility statements on websites to be controlled. Example: `{ "test.example.org": false, "gouvernement.lu": true}`
 - `office-files.json`: a file containing information about the office and PDF files present on the sites to be controlled. This file can be generated with the tool [simplA11yPDFAudit](https://github.com/accessibility-luxembourg/simplA11yPDFAudit)
 
 ## Installation
@@ -45,4 +45,4 @@ export TPL_PATH="../myCustomTemplates"
 ```
 
 ## License
-This software is (c) Information and press service of the luxembourgish government and licensed under the MIT license.
+This software is (c) [Information and press service](https://sip.gouvernement.lu/en.html) of the luxembourgish government and licensed under the MIT license.
