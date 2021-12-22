@@ -9,7 +9,7 @@ Most of the [accessibility reports](https://data.public.lu/fr/datasets/audits-si
 
 In order to be able to run, this tool needs 4 files in the `./data` folder:
 - `statements.json`: a file containing information about the presence of accessibility statements on websites to be controlled. Example: `{ "test.example.org": false, "gouvernement.lu": true}`
-- `office-files.json`: a file containing information about the office and PDF files present on the sites to be controlled. This file can be generated with the tool [simplA11yPDFAudit](https://github.com/accessibility-luxembourg/simplA11yPDFAudit)
+- `office-files.json`: a file containing information about the office and PDF files present on the sites to be controlled. This file can be generated with the tool [simplA11yPDFCrawler](https://github.com/accessibility-luxembourg/simplA11yPDFCrawler)
 
 ## Installation
 
@@ -17,7 +17,6 @@ In order to be able to run, this tool needs 4 files in the `./data` folder:
 git clone https://github.com/accessibility-luxembourg/simplA11yGenReport.git
 cd simplA11yGenReport
 npm install
-mkdir data && mkdir in && mkdir out
 ```
 
 ## Usage
@@ -38,7 +37,7 @@ The reports will be stored in the ./out folder.
 ## Configuration
 You can customise the templates to fit your needs.
 Make a copy of the `tpl` folder in the location of your choice and set the `TPL_PATH` environment variable to the path of your custom templates.
-Example: 
+Example:
 
 ```
 export TPL_PATH="../myCustomTemplates"
