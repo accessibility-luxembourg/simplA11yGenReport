@@ -17,7 +17,6 @@ In order to be able to run, this tool needs 4 files in the `./data` folder:
 git clone https://github.com/accessibility-luxembourg/simplA11yGenReport.git
 cd simplA11yGenReport
 npm install
-mkdir data && mkdir in && mkdir out
 ```
 
 ## Usage
@@ -38,7 +37,7 @@ The reports will be stored in the ./out folder.
 ## Configuration
 You can customise the templates to fit your needs.
 Make a copy of the `tpl` folder in the location of your choice and set the `TPL_PATH` environment variable to the path of your custom templates.
-Example: 
+Example:
 
 ```
 export TPL_PATH="../myCustomTemplates"
