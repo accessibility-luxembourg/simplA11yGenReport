@@ -8,7 +8,7 @@ Most of the [accessibility reports](https://data.public.lu/fr/datasets/audits-si
 ## Requirements
 
 In order to be able to run, this tool needs 4 files in the `./data` folder:
-- `statements.json`: a file containing information about the presence of accessibility statements on websites to be controlled. Example: `{ "test.example.org": false, "gouvernement.lu": true}`
+- `statements.json`: a file containing information about the presence of accessibility statements on websites to be controlled. Example: `{ "test.example.org": {"available": false}, "gouvernement.lu": {"available": true, "conform": true}, "forum-cai.lu": { "available": true, "conform": false, "missing": "contenus non conformes"}}`
 - `office-files.json`: a file containing information about the office and PDF files present on the sites to be controlled. This file can be generated with the tool [simplA11yPDFAudit](https://github.com/accessibility-luxembourg/simplA11yPDFAudit)
 
 ## Installation
