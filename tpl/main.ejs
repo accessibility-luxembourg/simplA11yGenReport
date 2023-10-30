@@ -28,14 +28,14 @@
             <div class="skip-link">
                 <a href="#main">contenu principal</a>
             </div>
-            <h1 id="title">Audit d'accessibilité simplifié - <span id="site"><%= info.site %></span></h1>
+            <h1 id="title">Audit d’accessibilité simplifié - <span id="site"><%= info.site %></span></h1>
             <p><%= info.date %></p>
         </header>
         <main role="main" id="main" tabindex="-1">
                 <%- include('intro', {info: info}) %>
             <h2 id="annexe-technique">Annexe technique</h2>
             <% if (issues.length == 0) { %>
-                <p>Aucun problème d'accessibilité détecté sur l'échantillon de pages.</p>
+                <p>Aucun problème d’accessibilité détecté sur l'échantillon de pages.</p>
             <% } else { %>
                 <% topics.forEach(topic => { %>
                     <%- include('topic', {topic: topic, solutions: solutions, issues: issues}) %>
