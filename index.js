@@ -64,7 +64,7 @@ for (let pageIdx = 1; pageIdx < 4; pageIdx++) {
             console.log(process.argv[2], 'page '+ pageIdx, 'contains untested criterias');
             exit(1);
         }
-        if (status == 'NC' && comment.trim().length == 0) {
+        if (status == 'NC' && derogation == 'N' && comment.trim().length == 0) {
             console.log(process.argv[2], 'page '+ pageIdx, 'comment is empty for criteria ' + criteria);
             exit(1);            
         }
@@ -106,9 +106,14 @@ for (let i=0; i<3; i++) {
 
 const siteName = process.argv[2].replace(/^.*\//,'').replace('.xlsx', '')
 if (statements[siteName] === undefined) {
-    console.log('site not found in statements: '+ siteName)
+    console.error('site not found in statements: '+ siteName)
     exit(1)
 } 
+
+if (docs[siteName] === undefined) {
+    console.log('site not found in office-files.json: '+ siteName)
+} 
+
 const declaration = statements[siteName]
 const docsInfos = docs[siteName]
 
