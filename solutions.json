@@ -128,7 +128,7 @@
         {
             "criterias": ["7.3"], 
             "title": "éléments interactifs inaccessibles au clavier",
-            "desc": "Les composants riches développés en JavaScript doivent respecter des modèles de conception spécifiques pour pouvoir être considérés comme accessibles (modèles de conception décrits dans le document [\"WAI-ARIA Authoring practices\"](https://www.w3.org/TR/wai-aria-practices-1.1/){lang=en}). Sans cela le composant ne sera pas correctement restitué aux utilisateurs de lecteurs d'écran qui ne sauront pas comment l'utiliser. Ces composants doivent notamment utiliser des interactions au clavier spécifiques, sans lesquelles ils seront inutilisables pour les utilisateurs de la navigation au clavier."         
+            "desc": "Les composants riches développés en JavaScript doivent respecter des modèles de conception spécifiques pour pouvoir être considérés comme accessibles (modèles de conception décrits dans le document [\"WAI-ARIA Authoring practices guide\"](https://www.w3.org/WAI/ARIA/apg/patterns/){lang=en}). Sans cela le composant ne sera pas correctement restitué aux utilisateurs de lecteurs d'écran qui ne sauront pas comment l'utiliser. Ces composants doivent notamment utiliser des interactions au clavier spécifiques, sans lesquelles ils seront inutilisables pour les utilisateurs de la navigation au clavier."         
         }         
     ],
     "8": [
