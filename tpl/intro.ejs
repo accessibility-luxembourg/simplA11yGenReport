@@ -9,7 +9,7 @@
 <p>Voici les pages qui ont été évaluées lors de cet audit&nbsp;:</p>
 <ul>
     <% info.pages.forEach(p => { %>
-        <li>Page P0<%=p.id %>&nbsp;: <a href="<%= p.value %>"><%= p.label %></a></li>
+        <li>Page <%=p.id %>&nbsp;: <a href="<%= p.value %>"><%= p.label %></a></li>
     <% }) %>
 </ul>
 <p>Méthode d’évaluation&nbsp;: <a href="https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html">Méthode de contrôle simplifiée de l’accessibilité pour le Luxembourg – v1.2</a></p>
@@ -17,7 +17,7 @@
 
 <h2 id="declaration">Déclaration sur l’accessibilité</h2>
 <% if (!declaration.available) { %>
-<p><strong>La déclaration sur l’accessibilité est manquante</strong>. Celle-ci est obligatoire d’après l’article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Cette déclaration s’effectue après avoir réalisé un audit de conformité basé sur le <a href="https://accessibilite.public.lu/fr/rgaa4.1.2/index.html">RGAA</a>. Pour créer une déclaration sur base des résultats d’un audit de conformité, le <a href="https://accessibilite.public.lu/fr/tools/decla.html">formulaire disponible à cet effet sur accessibilite.lu</a> peut être utilisé. Une fois la déclaration d’accessibilité publiée, l’éditeur du site a 30 jours pour en informer le SIP par mail à l’adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
+<p><strong>La déclaration sur l’accessibilité est manquante</strong>. Celle-ci est obligatoire d’après l’article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Cette déclaration s’effectue après avoir réalisé un audit de conformité basé sur le <a href="https://accessibilite.public.lu/fr/rgaa4.1.2/index.html">RGAA</a>. Pour créer une déclaration sur base des résultats d’un audit de conformité, le <a href="https://accessibilite.public.lu/fr/tools/decla.html">formulaire disponible à cet effet sur accessibilite.public.lu</a> peut être utilisé. Une fois la déclaration d’accessibilité publiée, l’éditeur du site a 30 jours pour en informer le SIP par mail à l’adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
 <% } else if (!declaration.conform) { %>
 <p><strong>La déclaration sur l’accessibilité est incomplète</strong>. Certaines informations obligatoires sont manquantes, par exemple&nbsp;: <%= declaration.missing %>. Les éléments obligatoires de la déclaration sont présentés dans l’article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Une fois la déclaration d’accessibilité mise à jour, l’éditeur du site a 30 jours pour en informer le SIP par mail à l’adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
 <% } else { %>
@@ -33,13 +33,13 @@
     Le niveau d’accessibilité global présenté dans la section "Appréciation générale", doit être nuancé au vu des points suivants&nbsp;: </p>
     
     <% if (docs['pdf-exempt'] >= 50) { %>
-    <p>Un nombre important de contenus dérogés impacte la pertinence des résultats de l’audit (la liste des dérogations prévues par la loi est disponible sur <a href="https://accessibilite.public.lu/fr/obligations.html#contenus-exempt%C3%A9s">la page "obligations" du site accessibilite.lu</a>). Le site contient un grand nombre de contenus dérogés. En effet, un nombre important de fichiers PDF a été publié avant le 23 septembre 2018 (soit <%= docs['pdf-exempt'] %> fichiers). Bien que ces fichiers soient exemptés d’obligation de mise en accessibilité par la loi du 28 mai 2019, il est recommandé de les rendre accessibles, sans quoi une part importante du contenu mis à disposition sur ce site ne pourra être consulté par les personnes en situation de handicap.</p> 
+    <p>Un nombre important de contenus dérogés impacte la pertinence des résultats de l’audit (la liste des dérogations prévues par la loi est disponible sur <a href="https://accessibilite.public.lu/fr/obligations.html#contenus-exempt%C3%A9s">la page "obligations" du site accessibilite.public.lu</a>). Le site contient un grand nombre de contenus dérogés. En effet, un nombre important de fichiers PDF a été publié avant le 23 septembre 2018 (soit <%= docs['pdf-exempt'] %> fichiers). Bien que ces fichiers soient exemptés d’obligation de mise en accessibilité par la loi du 28 mai 2019, il est recommandé de les rendre accessibles, sans quoi une part importante du contenu mis à disposition sur ce site ne pourra être consulté par les personnes en situation de handicap.</p> 
     <% } %>
 
     <% if (docs['files'] >= 100) { %>
     <p>Une quantité importante de documents bureautiques en téléchargement a été détectée, ce qui peut avoir un impact négatif sur l’accessibilité globale de ce site. Sur l’échantillon de fichiers analysé, <%= docs['pcent-pdf'] %> % sont des documents PDF et <%= docs['pcent-form'] %> % sont des formulaires PDF. Le format PDF est en général moins accessible que les pages Web et que les documents Office (.docx, .pptx, etc.); l’accessibilité des formulaires est particulièrement importante dans la mesure où ils sont en général nécessaires à la réalisation de procédures administratives.</p>
     <% if (docs['pcent-pdf-blocking-pb-access'] != 0) { %>
-    <p>Sur les fichiers PDF qui entrent dans le cadre de la loi (publication après le 23 septembre 2018) et issus de l’échantillon, <%= docs['pcent-pdf-blocking-pb-access'] %> % ont un problème d’accessibilité grave, qui empêche totalement l’accès au contenu du document par les utilisateurs (ex: fichier non taggué, fichier protégé, document scanné).Ces informations sont données à titre indicatif, car la présence d’une alternative accessible n’a pas été vérifiée dans le cadre de cet audit simplifié.</p>
+    <p>Sur les fichiers PDF qui entrent dans le cadre de la loi (publication après le 23 septembre 2018) et issus de l’échantillon, <%= docs['pcent-pdf-blocking-pb-access'] %> % ont un problème d’accessibilité grave, qui empêche totalement l’accès au contenu du document par les utilisateurs (ex: fichier non balisé, fichier protégé, document numérisé). Ces informations sont données à titre indicatif, car la présence d’une alternative accessible n’a pas été vérifiée dans le cadre de cet audit simplifié.</p>
     <% } %> 
     <% } %>
     
