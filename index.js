@@ -94,6 +94,11 @@ info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
 info['date'] = getFieldVal(workbook.Sheets['Échantillon'], 'A', '3', 'v')
 info['score'] = getFieldVal(workbook.Sheets['Résultats'], 'B', '4', 'v')
 
+if (info['site'] == '' || info['date'] == '' || info['score'] == '')  {
+    console.error('metadata not found: '+ siteName)
+    exit(1)
+}
+
 // console.log(process.argv[2], info['score'])
 info['pages'] = []
 for (let i=0; i<3; i++) {
@@ -102,6 +107,10 @@ for (let i=0; i<3; i++) {
     info['pages'][i]['id'] = i+1
     info['pages'][i]['label'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', i+7 , 'v')
     info['pages'][i]['value'] = getFieldVal(workbook.Sheets['Échantillon'], 'C', i+7 , 'v')
+    if (info['pages'][i]['label'] == '' || info['pages'][i]['value'] == '') {
+        console.error('name or url of a page not found: '+ siteName)
+        exit(1)
+    }
 }
 
 const siteName = process.argv[2].replace(/^.*\//,'').replace('.xlsx', '')
@@ -111,7 +120,7 @@ if (statements[siteName] === undefined) {
 } 
 
 if (docs[siteName] === undefined) {
-    console.log('site not found in office-files.json: '+ siteName)
+    console.log('Warning: site not found in office-files.json: '+ siteName)
 } 
 
 const declaration = statements[siteName]
