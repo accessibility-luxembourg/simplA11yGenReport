@@ -18,7 +18,7 @@
             </div>
             <div class="nobreak">
             <h5>Exemples de problèmes détectés sur la <a href="<%= info.pages[parseInt(shortList[0].page)-1].value %>">page <%= shortList[0].page %></a></h5>
-            <%- mdForExcel.render(shortList[0].comment) %>
+            <%- formatKeys(mdForExcel.render(shortList[0].comment)) %>
             </div>
     <%      }
         })

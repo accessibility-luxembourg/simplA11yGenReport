@@ -46,6 +46,16 @@ function getFieldVal(sheet, x, y, type) {
     }
 }
 
+function formatKeys(str) {
+    return str.replaceAll('Echap', '<kbd>Echap</kbd')
+                .replaceAll('Entrée', '<kbd>Entrée</kbd>')
+                .replaceAll('Espace', '<kbd>Espace</kbd')
+                .replaceAll('barre d\'espace', '<kbd>barre d\'espace</kbd>')
+                .replaceAll('Enter', '<kbd>Enter</kbd>')
+                .replaceAll('Space', '<kbd>Space</kbd>')
+                .replaceAll('Escape', '<kbd>Escape</kbd>')
+}
+
 // read issues from Excel sheet
 const issues = []
 const topicsToDisplay = []
@@ -128,7 +138,7 @@ const docsInfos = docs[siteName]
 
 
 // render issues
-ejs.renderFile(tpl_path+'/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues, declaration: declaration, docs: docsInfos}, function(err, str){
+ejs.renderFile(tpl_path+'/main.ejs', {topics: topics, md: md, mdForExcel: mdForExcel, info: info, solutions: solutions, issues: issues, declaration: declaration, docs: docsInfos, formatKeys: formatKeys}, function(err, str){
     if (err !== null) {
         console.log(err)
     }

@@ -38,7 +38,7 @@
                 <p>Aucun problème d’accessibilité détecté sur l'échantillon de pages.</p>
             <% } else { %>
                 <% topics.forEach(topic => { %>
-                    <%- include('topic', {topic: topic, solutions: solutions, issues: issues}) %>
+                    <%- include('topic', {topic: topic, solutions: solutions, issues: issues, formatKeys: formatKeys}) %>
                 <% }) %>
             <% } %>
         </main>
