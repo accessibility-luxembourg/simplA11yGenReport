@@ -187,7 +187,7 @@
         {
             "criterias": ["10.14"], 
             "title": "contenus additionnels au survol et au focus",
-            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex&nbsp;: infobulles, menus déroulants). Tout élément qui apparait au survol doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."         
+            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex&nbsp;: infobulles, menus déroulants). Tout élément qui apparaît au survol doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."         
         }
     ],
     "11": [
