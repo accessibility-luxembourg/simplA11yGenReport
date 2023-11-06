@@ -47,13 +47,15 @@ function getFieldVal(sheet, x, y, type) {
 }
 
 function formatKeys(str) {
-    return str.replaceAll('Echap', '<kbd>Echap</kbd')
+    return str.replaceAll('Echap', '<kbd>Echap</kbd>')
                 .replaceAll('Entrée', '<kbd>Entrée</kbd>')
-                .replaceAll('Espace', '<kbd>Espace</kbd')
-                .replaceAll('barre d\'espace', '<kbd>barre d\'espace</kbd>')
-                .replaceAll('Enter', '<kbd>Enter</kbd>')
-                .replaceAll('Space', '<kbd>Space</kbd>')
-                .replaceAll('Escape', '<kbd>Escape</kbd>')
+                .replaceAll('Espace', '<kbd>Espace</kbd>')
+                .replaceAll('barre d\'espace', '<kbd>barre d’espace</kbd>')
+                .replaceAll('barre d’espace', '<kbd>barre d’espace</kbd>')
+                .replaceAll('Enter', '<kbd>Entrée</kbd>')
+                .replaceAll('Space', '<kbd>Espace</kbd>')
+                .replaceAll('Escape', '<kbd>Echap</kbd>')
+                .replaceAll('escape', '<kbd>Echap</kbd>')
 }
 
 // read issues from Excel sheet
