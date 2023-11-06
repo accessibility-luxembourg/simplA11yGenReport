@@ -13,7 +13,7 @@
         {
             "criterias": ["1.4", "1.5"], 
             "title": "CAPTCHA",
-            "desc": "Tout [CAPTCHA](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#captcha) visuel qui ne fournit pas d'alternative permettant d'identifier sa nature et qui n'est pas accompagné d'un moyen alternatif pour passer le test (ex: CAPTCHA sonore) constitue un problème insurmontable pour les aveugles et les déficients visuels. Différentes alternatives aux CAPTCHA visuels sont décrites dans le document [\"Inaccessibility of CAPTCHA - Alternatives to Visual Turing Tests on the Web\"](https://www.w3.org/TR/turingtest/){lang=en} publié par le W3C."
+            "desc": "Tout [CAPTCHA](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#captcha) visuel qui ne fournit pas d'alternative permettant d'identifier sa nature et qui n'est pas accompagné d'un moyen alternatif pour passer le test (ex&nbsp;: CAPTCHA sonore) constitue un problème insurmontable pour les aveugles et les déficients visuels. Différentes alternatives aux CAPTCHA visuels sont décrites dans le document [\"Inaccessibility of CAPTCHA - Alternatives to Visual Turing Tests on the Web\"](https://www.w3.org/TR/turingtest/){lang=en} publié par le W3C."
         },
         {
             "criterias": ["1.6", "1.7"], 
@@ -39,14 +39,14 @@
             "title": "contrastes des textes",
             "desc": [
                 "Les contrastes de couleurs sont importants pour plusieurs types de déficiences visuelles comme celles des grands malvoyants ou des personnes ayant des problèmes de perception des couleurs.",
-                "Les contrastes minimaux d'un texte sur le fond de page sont définis par le RGAA comme suit :",
+                "Les contrastes minimaux d'un texte sur le fond de page sont définis par le RGAA comme suit&nbsp;:",
                 "",
                 "- Pour un texte sans effet de graisse",
-                "    - De taille inférieure à 24 px : le contraste minimum est de 4.5:1 ;",
-                "    - De taille supérieure ou égale à 24 px : le contraste minimum est de 3:1.",
+                "    - De taille inférieure à 24 px&nbsp;: le contraste minimum est de 4.5:1&nbsp;;",
+                "    - De taille supérieure ou égale à 24 px&nbsp;: le contraste minimum est de 3:1.",
                 "- Pour un texte en gras",
-                "    - De taille inférieure à 18.5 px : le contraste minimum est de 4.5:1 ;",
-                "    - De taille supérieure à 18.5 px : le contraste minimum est de 3:1.",
+                "    - De taille inférieure à 18.5 px&nbsp;: le contraste minimum est de 4.5:1&nbsp;;",
+                "    - De taille supérieure à 18.5 px&nbsp;: le contraste minimum est de 3:1.",
                 "",
                 "Pour vérifier les contrastes, on peut utiliser un outil tel que [\"Colour Contrast Analyser\"](https://www.tpgi.com/color-contrast-checker/){lang=en}.",
                 "Si les problèmes de contraste ne peuvent être résolus simplement, il est aussi possible d'utiliser un sélecteur de styles. C'est une fonctionnalité proposée par le site qui permet de renforcer les contrastes pour les personnes qui ont des problèmes avec les couleurs. Un exemple de sélecteur de styles est disponible sur le site [sncf.com](https://www.sncf.com/fr), dans son menu \"Accessibilité\"." 
@@ -58,31 +58,31 @@
             "criterias": ["4.1", "4.2"], 
             "title": "transcription textuelle et audiodescription",
             "desc": [ 
-                "Si une vidéo possède des textes incrustés ou des informations sonores (ex: personnes qui parlent sur la piste sonore) alors il est nécessaire de fournir une transcription textuelle. De même pour un média audio seulement qui est porteur d'information (ex: podcast), une transcription textuelle est nécessaire.",
+                "Si une vidéo possède des textes incrustés ou des informations sonores (ex&nbsp;: personnes qui parlent sur la piste sonore) alors il est nécessaire de fournir une transcription textuelle. De même pour un média audio seulement qui est porteur d'information (ex&nbsp;: podcast), une transcription textuelle est nécessaire.",
                 "L'absence de transcription textuelle sur de tels médias va empêcher l'accès à l'information à de nombreux utilisateurs comme les aveugles, les malvoyants, les sourds, les malentendants, les handicapés moteurs et cognitifs.",
                 "Une transcription textuelle présente de manière structurée toutes les informations visuelles et sonores de la vidéo dans l'ordre chronologique de leur apparition. Celle-ci peut-être présente sur la même page que la vidéo en question ou derrière un lien adjacent à la vidéo.",
                 "",
-                "Par ailleurs, si une vidéo possède des informations importantes véhiculées uniquement par l'image (ex: textes incrustés), il est nécessaire de fournir une audiodescription synchronisée. Il s'agit d'une piste sonore supplémentaire qui s'ajoute à la piste sonore principale et décrit les éléments visuels importants qui ne peuvent être compris à partir de la poste sonore principale. Ces descriptions sont réalisées dans les blancs de la piste sonore principale." 
+                "Par ailleurs, si une vidéo possède des informations importantes véhiculées uniquement par l'image (ex&nbsp;: textes incrustés), il est nécessaire de fournir une audiodescription synchronisée. Il s'agit d'une piste sonore supplémentaire qui s'ajoute à la piste sonore principale et décrit les éléments visuels importants qui ne peuvent être compris à partir de la poste sonore principale. Ces descriptions sont réalisées dans les blancs de la piste sonore principale." 
             ]
         },
         {
             "criterias": ["4.3", "4.4"], 
             "title": "sous-titres",
-            "desc": "Les vidéos sur ce site doivent avoir des sous-titres. Il existe deux types de sous-titres : les sous-titres de traduction et les sous-titres pour sourds et malentendants. Il est nécessaire de fournir ici des sous-titres pour sourds et malentendants. Ceux-ci doivent notamment fournir en plus des dialogues toutes les informations sur les éléments sonores nécessaires pour comprendre l'action. Les sous-titres doivent être correctement synchronisés avec la vidéo."         
+            "desc": "Les vidéos sur ce site doivent avoir des sous-titres. Il existe deux types de sous-titres&nbsp;: les sous-titres de traduction et les sous-titres pour sourds et malentendants. Il est nécessaire de fournir ici des sous-titres pour sourds et malentendants. Ceux-ci doivent notamment fournir en plus des dialogues toutes les informations sur les éléments sonores nécessaires pour comprendre l'action. Les sous-titres doivent être correctement synchronisés avec la vidéo."         
         },
         {
             "criterias": ["4.8", "4.9"], 
             "title": "médias non-temporels",
-            "desc": "Un média non-temporel est une application interactive insérée dans une page web. Exemples : carte interactive, diaporama, jeu vidéo. Chaque média non-temporel doit avoir une alternative accessible. Cette alternative doit permettre d'accéder au même contenu et à des fonctionnalités similaires. Elle peut être disponible directement dans la page ou dans une autre page par l'intermédiaire d'un lien adjacent au média non-temporel."         
+            "desc": "Un média non-temporel est une application interactive insérée dans une page web. Exemples&nbsp;: carte interactive, diaporama, jeu vidéo. Chaque média non-temporel doit avoir une alternative accessible. Cette alternative doit permettre d'accéder au même contenu et à des fonctionnalités similaires. Elle peut être disponible directement dans la page ou dans une autre page par l'intermédiaire d'un lien adjacent au média non-temporel."         
         },
         {
             "criterias": ["4.10"], 
             "title": "son déclenché automatiquement",
             "desc": [
-                "Tout son déclenché automatiquement (sans action de l'utilisateur) est autorisé si l'une de ces conditions est remplie :",
+                "Tout son déclenché automatiquement (sans action de l'utilisateur) est autorisé si l'une de ces conditions est remplie&nbsp;:",
                 "",
-                "- la durée est inférieure ou égale à 3 secondes ;",
-                "- le son peut être stoppé par l'utilisateur ; ",
+                "- la durée est inférieure ou égale à 3 secondes&nbsp;;",
+                "- le son peut être stoppé par l'utilisateur&nbsp;; ",
                 "- le volume du son peut être contrôlé indépendamment du volume système.",
                 "",
                 "Les sons déclenchés automatiquement posent problème aux aveugles et grands malvoyants, dans la mesure où ils peuvent recouvrir le son de la synthèse vocale qu'ils utilisent pour naviguer."         
@@ -119,8 +119,8 @@
             "desc": [
                 "Un lien doit toujours avoir un intitulé. Celui-ci permet aux utilisateurs de comprendre la destination du lien. La présence d'intitulés sur tous les liens est particulièrement importante pour les aveugles et malvoyants. Si un lien n'a pas d'intitulé, les lecteurs d'écran vont lire simplement \"lien\" sans annoncer sa destination.",
                 "",
-                "- Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image. Pour une image matricielle, son attribut `alt` doit contenir l'intitulé du lien (ex: `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"facebook\" /></a>`). Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=\"img\"` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby` (ex: `<a href=\"https://facebook.com\"><svg role=\"img\" aria-label=\"facebook\">...</svg></a>`).",
-                "- Lorsqu'un lien contient du texte et des images, l'intitulé du lien correspond à la concaténation des intitulés de ces différents éléments contenus dans le lien (ex: pour `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"logo Facebook\" /> Facebook</a>` l'intitulé du lien est \"logo facebook facebook\". Dans cet exemple, cet intitulé n'est pas pertinent et l'alternative de l'image doit être vide.)"   
+                "- Pour un lien qui ne contient qu'une image, l'intitulé du lien est l'alternative de l'image. Pour une image matricielle, son attribut `alt` doit contenir l'intitulé du lien (ex&nbsp;: `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"facebook\" /></a>`). Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `role=\"img\"` et l'intitulé du lien pourra être fourni via les attributs `aria-label` ou `aria-labelledby` (ex&nbsp;: `<a href=\"https://facebook.com\"><svg role=\"img\" aria-label=\"facebook\">...</svg></a>`).",
+                "- Lorsqu'un lien contient du texte et des images, l'intitulé du lien correspond à la concaténation des intitulés de ces différents éléments contenus dans le lien (ex&nbsp;: pour `<a href=\"https://facebook.com\"><img src=\"...\" alt=\"logo Facebook\" /> Facebook</a>` l'intitulé du lien est \"logo facebook facebook\". Dans cet exemple, cet intitulé n'est pas pertinent et l'alternative de l'image doit être vide.)"   
             ]
         }        
     ],
@@ -142,9 +142,9 @@
             "title": "indication de langue",
             "desc": [
                 "Les lecteurs d'écran utilisent les indications de langue pour vocaliser correctement le contenu. La langue principale de la page est spécifiée via l'attribut `lang` sur l'élément `<html>`. Lorsqu'un mot d'origine étrangère est inséré dans du contenu écrit dans la langue principale de la page, il doit posséder si nécessaire une indication de langue. L'indication de langue se fait par l'intermédiaire de l'attribut `lang`.",
-                "Il existe néanmoins des exceptions :",
-                "- Lorsqu'il s'agit d'un nom, l'indication de langue doit être faite uniquement quand le nom doit se prononcer dans sa langue d'origine ;",
-                "- Lorsqu'il s'agit d'un mot d'origine étrangère, présent dans le dictionnaire de la langue principale de la page, l'indication de langue n'est pas nécessaire ;",
+                "Il existe néanmoins des exceptions&nbsp;:",
+                "- Lorsqu'il s'agit d'un nom, l'indication de langue doit être faite uniquement quand le nom doit se prononcer dans sa langue d'origine&nbsp;;",
+                "- Lorsqu'il s'agit d'un mot d'origine étrangère, présent dans le dictionnaire de la langue principale de la page, l'indication de langue n'est pas nécessaire&nbsp;;",
                 "- Lorsqu'il s'agit d'un mot d'origine étrangère d'usage courant, mais absent du dictionnaire, l'indication de langue doit être faite uniquement si la prononciation dans la langue principale de la page est problématique."
             ]
         }, 
@@ -185,7 +185,7 @@
         {
             "criterias": ["10.14"], 
             "title": "contenus additionnels au survol et au focus",
-            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex: infobulles, menus déroulants). Tout élément qui apparait au survol doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."         
+            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex&nbsp;: infobulles, menus déroulants). Tout élément qui apparait au survol doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."         
         }
     ],
     "11": [
@@ -210,7 +210,7 @@
             "criterias": ["12.6"], 
             "title": "*landmarks*{lang=en} ARIA",
             "desc": [ 
-                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone :", 
+                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone&nbsp;:", 
                 "- `role=banner` pour l'entête,",
                 "- `role=navigation` pour le menu de navigation,",
                 "- `role=main` pour la zone de contenu principale,",
@@ -231,7 +231,7 @@
         {
             "criterias": ["12.11"], 
             "title": "contenus additionnels",
-            "desc": "Un exemple de contenu additionnel apparaissant au survol ou à la prise de focus est une infobulle personnalisée proposant dans son contenu un élément interactif (ex : un lien). Les utilisateurs aveugles et les personnes avec un handicap moteur doivent pouvoir accéder à ces contenus en navigant au clavier."         
+            "desc": "Un exemple de contenu additionnel apparaissant au survol ou à la prise de focus est une infobulle personnalisée proposant dans son contenu un élément interactif (ex&nbsp;: un lien). Les utilisateurs aveugles et les personnes avec un handicap moteur doivent pouvoir accéder à ces contenus en navigant au clavier."         
         }
     ],
     "13": [
