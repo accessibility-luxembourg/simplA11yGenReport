@@ -145,7 +145,9 @@
                 "Il existe néanmoins des exceptions&nbsp;:",
                 "- Lorsqu'il s'agit d'un nom, l'indication de langue doit être faite uniquement quand le nom doit se prononcer dans sa langue d'origine&nbsp;;",
                 "- Lorsqu'il s'agit d'un mot d'origine étrangère, présent dans le dictionnaire de la langue principale de la page, l'indication de langue n'est pas nécessaire&nbsp;;",
-                "- Lorsqu'il s'agit d'un mot d'origine étrangère d'usage courant, mais absent du dictionnaire, l'indication de langue doit être faite uniquement si la prononciation dans la langue principale de la page est problématique."
+                "- Lorsqu'il s'agit d'un mot d'origine étrangère d'usage courant, mais absent du dictionnaire, l'indication de langue doit être faite uniquement si la prononciation dans la langue principale de la page est problématique.",
+                "",
+                "Plus d’information sur le sujet dans notre article&nbsp;: [L’attribut lang, pour rendre la page audible... et compréhensible](https://accessibilite.public.lu/fr/news/2023-10-05-langues.html)"
             ]
         }, 
         {
