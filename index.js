@@ -81,6 +81,10 @@ for (let pageIdx = 1; pageIdx < 4; pageIdx++) {
             console.log(process.argv[2], 'page '+ pageIdx, 'comment is empty for criteria ' + criteria);
             exit(1);            
         }
+        if ((criteria == '8.1' || criteria == '8.2') && status !== 'C') {
+            console.log('Error: 8.1 and 8.2 are deprecated in '+process.argv[2]+', they should be conform');
+            exit(1);
+        }
 
         if (status == 'NC' && derogation == 'N') {
             if (!topicsToDisplay.includes(topic)) {
@@ -106,6 +110,7 @@ const info = {}
 info['site'] = getFieldVal(workbook.Sheets['Échantillon'], 'B', '4', 'v')
 info['date'] = getFieldVal(workbook.Sheets['Échantillon'], 'A', '3', 'v')
 info['score'] = getFieldVal(workbook.Sheets['Résultats'], 'B', '4', 'v')
+const siteName = process.argv[2].replace(/^.*\//,'').replace('.xlsx', '')
 
 if (info['site'] == '' || info['date'] == '' || info['score'] == '')  {
     console.error('metadata not found: '+ siteName)
@@ -126,7 +131,6 @@ for (let i=0; i<3; i++) {
     }
 }
 
-const siteName = process.argv[2].replace(/^.*\//,'').replace('.xlsx', '')
 if (statements[siteName] === undefined) {
     console.error('site not found in statements: '+ siteName)
     exit(1)
@@ -137,6 +141,31 @@ if (docs[siteName] === undefined) {
 } 
 
 const declaration = statements[siteName]
+
+// check if the file "accessibility-statements.json" has the right format
+const availableType = typeof declaration.available
+if (availableType !== "boolean") {
+    console.error(`Error: the available property in accessibility-statements.json should be a boolean, ${availableType} found.`)
+    exit(1)
+}
+
+if (declaration.conform !== undefined) {
+    const conformType = typeof declaration.conform
+    if (conformType !== "boolean") {
+        console.error(`Error: the conform property in accessibility-statements.json should be a boolean, ${conformType} found.`)
+        exit(1)
+    }
+}
+
+if (declaration.missing !== undefined) {
+    const missingType = typeof declaration.missing
+    if (missingType !== "string") {
+        console.error(`Error: the missing property in accessibility-statements.json should be a string, ${missingType} found.`)
+        exit(1)
+    }
+}
+
+
 const docsInfos = docs[siteName]
 
 
