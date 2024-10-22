@@ -22,7 +22,9 @@
                 <a href="#avertissement">Avertissement</a>
                 <a href="#echantillon">Échantillon</a>
                 <a href="#declaration">Déclaration</a>
-                <a href="#documents-bureautiques">Documents bureautiques</a>
+                <% if (docs !== undefined && (docs['pdf-exempt'] >= 50 || docs['files'] >= 100)) { %>
+                    <a href="#documents-bureautiques">Documents bureautiques</a>
+                <% } %>
                 <a href="#annexe-technique">Annexe technique</a>
             </div>
             <div class="skip-link">
