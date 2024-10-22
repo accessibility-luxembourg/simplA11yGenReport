@@ -3,3 +3,4 @@ out
 in
 data
 .env
+*.code-workspace
