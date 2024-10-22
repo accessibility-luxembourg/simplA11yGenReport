@@ -3,7 +3,7 @@
 <p>(Échelle : très faible, faible, moyen, bon, très bon)</p>
 
 <h2 id="avertissement">Avertissement</h2>
-<p>Il s’agit là d'un audit simplifié et non un audit de conformité (ou audit "complet"). Il a vocation à détecter une série de problèmes d’accessibilité mais n’est pas exhaustif. Le fait qu’aucun problème ne soit remonté pour un critère d’accessibilité donné ne signifie pas qu’il n’y a pas de problème d’accessibilité pour ce critère. De même, lorsque nous rapportons une occurrence d’un problème, ce problème peut avoir d’autres occurrences. Il est nécessaire de vérifier de manière exhaustive l’accessibilité de ce site conformément au référentiel <a href="https://accessibilite.public.lu/fr/rgaa4.1.2/index.html">RGAA</a>.</p>
+<p>Il s’agit là d'un audit simplifié et non un audit de conformité (ou audit "complet"). Il a vocation à détecter une série de problèmes d’accessibilité mais n’est pas exhaustif. Le fait qu’aucun problème ne soit remonté pour un critère d’accessibilité donné ne signifie pas qu’il n’y a pas de problème d’accessibilité pour ce critère. De même, lorsque nous rapportons une occurrence d’un problème, ce problème peut avoir d’autres occurrences. Il est nécessaire de vérifier de manière exhaustive l’accessibilité de ce site conformément au référentiel <a href="https://accessibilite.public.lu/fr/raweb1/index.html">RAWeb</a>.</p>
 
 <h2 id="echantillon">Échantillon de pages et référentiel</h2>
 <p>Voici les pages qui ont été évaluées lors de cet audit&nbsp;:</p>
@@ -12,12 +12,12 @@
         <li>Page <%=p.id %>&nbsp;: <a href="<%= p.value %>"><%= p.label %></a></li>
     <% }) %>
 </ul>
-<p>Méthode d’évaluation&nbsp;: <a href="https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html">Méthode de contrôle simplifiée de l’accessibilité pour le Luxembourg – v1.2</a></p>
-<p>Référentiel&nbsp;: <a href="https://accessibilite.public.lu/fr/rgaa4.1.2/index.html">RGAA v4.1.2</a></p>
+<p>Méthode d’évaluation&nbsp;: <a href="https://accessibilite.public.lu/fr/monitoring/controle-simplifie.html">Méthode de contrôle simplifiée de l’accessibilité pour le Luxembourg – v1.2.1</a></p>
+<p>Référentiel&nbsp;: <a href="https://accessibilite.public.lu/fr/raweb1/index.html">RAWeb v1</a></p>
 
 <h2 id="declaration">Déclaration sur l’accessibilité</h2>
 <% if (!declaration.available) { %>
-<p><strong>La déclaration sur l’accessibilité est manquante</strong>. Celle-ci est obligatoire d’après l’article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Cette déclaration s’effectue après avoir réalisé un audit de conformité basé sur le <a href="https://accessibilite.public.lu/fr/rgaa4.1.2/index.html">RGAA</a>. Pour créer une déclaration sur base des résultats d’un audit de conformité, le <a href="https://accessibilite.public.lu/fr/tools/decla.html">formulaire disponible à cet effet sur accessibilite.public.lu</a> peut être utilisé. Une fois la déclaration d’accessibilité publiée, l’éditeur du site a 30 jours pour en informer le SIP par e-mail à l’adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
+<p><strong>La déclaration sur l’accessibilité est manquante</strong>. Celle-ci est obligatoire d’après l’article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Cette déclaration s’effectue après avoir réalisé un audit de conformité basé sur le <a href="https://accessibilite.public.lu/fr/raweb1/index.html">RAWeb</a>. Pour créer une déclaration sur base des résultats d’un audit de conformité, le <a href="https://accessibilite.public.lu/fr/tools/decla.html">formulaire disponible à cet effet sur accessibilite.public.lu</a> peut être utilisé. Une fois la déclaration d’accessibilité publiée, l’éditeur du site a 30 jours pour en informer le SIP par e-mail à l’adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
 <% } else if (!declaration.conform) { %>
 <p><strong>La déclaration sur l’accessibilité est incomplète</strong>. Certaines informations obligatoires sont manquantes, par exemple&nbsp;: <%= declaration.missing %>. Les éléments obligatoires de la déclaration sont présentés dans l’article 5 de la <a href="https://legilux.public.lu/eli/etat/leg/loi/2019/05/28/a373/jo">loi du 28 mai 2019</a>. Une fois la déclaration d’accessibilité mise à jour, l’éditeur du site a 30 jours pour en informer le SIP par mail à l’adresse <a href="mailto:accessibilite@sip.etat.lu">accessibilite@sip.etat.lu</a>.</p>
 <% } else { %>

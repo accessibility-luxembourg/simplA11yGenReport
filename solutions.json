@@ -8,17 +8,17 @@
         {
             "criterias": ["1.2"], 
             "title": "images de décoration",
-            "desc": "Les [images de décoration](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#image-de-decoration) ne doivent pas avoir d'alternative textuelle et doivent être ignorées correctement par les technologies d'assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d'écran (aveugles et grands malvoyants). Pour une image matricielle, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `aria-hidden=\"true\"`."
+            "desc": "Les [images de décoration](https://accessibilite.public.lu/fr/raweb1/glossaire.html#image-de-decoration) ne doivent pas avoir d'alternative textuelle et doivent être ignorées correctement par les technologies d'assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d'écran (aveugles et grands malvoyants). Pour une image matricielle, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `aria-hidden=\"true\"`."
         },
         {
             "criterias": ["1.4", "1.5"], 
             "title": "CAPTCHA",
-            "desc": "Tout [CAPTCHA](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#captcha) visuel qui ne fournit pas d'alternative permettant d'identifier sa nature et qui n'est pas accompagné d'un moyen alternatif pour passer le test (ex&nbsp;: CAPTCHA sonore) constitue un problème insurmontable pour les aveugles et les déficients visuels. Différentes alternatives aux CAPTCHA visuels sont décrites dans le document [\"Inaccessibility of CAPTCHA - Alternatives to Visual Turing Tests on the Web\"](https://www.w3.org/TR/turingtest/){lang=en} publié par le W3C."
+            "desc": "Tout [CAPTCHA](https://accessibilite.public.lu/fr/raweb1/glossaire.html#captcha) visuel qui ne fournit pas d'alternative permettant d'identifier sa nature et qui n'est pas accompagné d'un moyen alternatif pour passer le test (ex&nbsp;: CAPTCHA sonore) constitue un problème insurmontable pour les aveugles et les déficients visuels. Différentes alternatives aux CAPTCHA visuels sont décrites dans le document [\"Inaccessibility of CAPTCHA - Alternatives to Visual Turing Tests on the Web\"](https://www.w3.org/TR/turingtest/){lang=en} publié par le W3C."
         },
         {
             "criterias": ["1.6", "1.7"], 
             "title": "images porteuses d'information complexes",
-            "desc": "Certaines images porteuses d'informations sont particulièrement complexes, par exemple lorsqu'elles présentent des graphiques, schémas, cartes, etc. Dans ce cas, ces images nécessitent une description détaillée adjacente à l'image afin de permettre aux personnes aveugles et dyslexiques d'accéder à toutes les informations véhiculées par l'image. Pour mettre à disposition cette description détaillée, plusieurs solutions sont possibles. Le texte peut être adjacent à l'image dans la même page ou on peut placer un lien adjacent à l'image qui mène à une page où se trouve la description. Le texte peut aussi être inclus dans un composant permettant de le masquer et de l'afficher sur demande, au clic d'un bouton \"afficher la description de l'image\" (via le motif de conception ARIA [\"disclosure\"](https://www.w3.org/TR/wai-aria-practices-1.1/#disclosure){lang=en})."            
+            "desc": "Certaines images porteuses d'informations sont particulièrement complexes, par exemple lorsqu'elles présentent des graphiques, schémas, cartes, etc. Dans ce cas, ces images nécessitent une description détaillée adjacente à l'image afin de permettre aux personnes aveugles et dyslexiques d'accéder à toutes les informations véhiculées par l'image. Pour mettre à disposition cette description détaillée, plusieurs solutions sont possibles. Le texte peut être adjacent à l'image dans la même page ou on peut placer un lien adjacent à l'image qui mène à une page où se trouve la description. Le texte peut aussi être inclus dans un composant permettant de le masquer et de l'afficher sur demande, au clic d'un bouton \"afficher la description de l'image\" (via le motif de conception ARIA [\"disclosure\"](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/){lang=en})."            
         }
     ],
     "2": [
@@ -39,7 +39,7 @@
             "title": "contrastes des textes",
             "desc": [
                 "Les contrastes de couleurs sont importants pour plusieurs types de déficiences visuelles comme celles des grands malvoyants ou des personnes ayant des problèmes de perception des couleurs.",
-                "Les contrastes minimaux d'un texte sur le fond de page sont définis par le RGAA comme suit&nbsp;:",
+                "Les contrastes minimaux d'un texte sur le fond de page sont définis par le RAWeb comme suit&nbsp;:",
                 "",
                 "- Pour un texte sans effet de graisse",
                 "    - De taille inférieure à 24 px&nbsp;: le contraste minimum est de 4.5:1&nbsp;;",
@@ -49,7 +49,7 @@
                 "    - De taille supérieure à 18.5 px&nbsp;: le contraste minimum est de 3:1.",
                 "",
                 "Pour vérifier les contrastes, on peut utiliser un outil tel que [\"Colour Contrast Analyser\"](https://www.tpgi.com/color-contrast-checker/){lang=en}.",
-                "Si les problèmes de contraste ne peuvent être résolus simplement, il est aussi possible d'utiliser un sélecteur de styles. C'est une fonctionnalité proposée par le site qui permet de renforcer les contrastes pour les personnes qui ont des problèmes avec les couleurs. Un exemple de sélecteur de styles est disponible sur le site [sncf.com](https://www.sncf.com/fr), dans son menu \"Accessibilité\"." 
+                "Si les problèmes de contraste ne peuvent être résolus simplement, il est aussi possible d'utiliser un sélecteur de styles. C'est une fonctionnalité proposée par le site qui permet de renforcer les contrastes pour les personnes qui ont des problèmes avec les couleurs. Un exemple de sélecteur de styles est disponible sur le site [guichet.lu](https://guichet.public.lu/), dans son menu \"Accessibilité\"." 
             ]
         }
     ],
@@ -103,7 +103,7 @@
                 "",
                 "Dans un tableau de données simple, où chaque entête est valable pour l'ensemble de la ligne ou de la colonne, la relation entre les cellules et les entêtes doit être définie en appliquant un attribut `scope=\"col\"` à toutes les entêtes de colonnes et `scope=\"row\"` à toutes les entêtes de lignes.",
                 "",
-                "Dans un [tableau de données complexe](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#tableau-de-donnees-complexe), chaque entête doit avoir un identifiant déclaré via l'attribut `id` et chaque cellule doit faire référence à ces entêtes via l'attribut `headers` (liste d'identifiants séparés par des espaces)."  
+                "Dans un [tableau de données complexe](https://accessibilite.public.lu/fr/raweb1/glossaire.html#tableau-de-donnees-complexe), chaque entête doit avoir un identifiant déclaré via l'attribut `id` et chaque cellule doit faire référence à ces entêtes via l'attribut `headers` (liste d'identifiants séparés par des espaces)."  
             ]       
         } 
     ],
@@ -160,7 +160,7 @@
         {
             "criterias": ["9.1"], 
             "title": "titres",
-            "desc": "Les [titres](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#titre) permettent aux utilisateurs de comprendre la structure du document. Ils permettent aussi aux utilisateurs aveugles, malvoyants et handicapés moteurs de naviguer de titre en titre dans la page. Il est donc important d'avoir une bonne hiérarchie de titres dans une page. Cette hiérarchie est similaire à un sommaire de document. La vérification de la hiérarchie de titres peut se faire via l'extension de navigateur [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/){lang=en}."
+            "desc": "Les [titres](https://accessibilite.public.lu/fr/raweb1/glossaire.html#titre) permettent aux utilisateurs de comprendre la structure du document. Ils permettent aussi aux utilisateurs aveugles, malvoyants et handicapés moteurs de naviguer de titre en titre dans la page. Il est donc important d'avoir une bonne hiérarchie de titres dans une page. Cette hiérarchie est similaire à un sommaire de document. La vérification de la hiérarchie de titres peut se faire via l'extension de navigateur [HeadingsMap](https://addons.mozilla.org/fr/firefox/addon/headingsmap/){lang=en}."
         },
         {
             "criterias": ["9.2"], 
@@ -172,7 +172,7 @@
         {
             "criterias": ["10.7"], 
             "title": "visibilité du focus",
-            "desc": "Les handicapés moteurs qui naviguent au clavier utilisent l'[indicateur de focus](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#prise-de-focus) fourni par le site sur les éléments interactifs pour savoir où ils se situent dans la page. L'indicateur de focus se déplace via les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>. L'indicateur de focus par défaut peut être désactivé via CSS, dans ce cas il est nécessaire de changer le style de l'élément interactif pour rendre l'indicateur de focus visible (sa couleur devra avoir un contraste minimum de 3:1 avec l'arrière-plan contigu)."         
+            "desc": "Les handicapés moteurs qui naviguent au clavier utilisent l'[indicateur de focus](https://accessibilite.public.lu/fr/raweb1/glossaire.html#prise-de-focus) fourni par le site sur les éléments interactifs pour savoir où ils se situent dans la page. L'indicateur de focus se déplace via les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>. L'indicateur de focus par défaut peut être désactivé via CSS, dans ce cas il est nécessaire de changer le style de l'élément interactif pour rendre l'indicateur de focus visible (sa couleur devra avoir un contraste minimum de 3:1 avec l'arrière-plan contigu)."         
         },
         {
             "criterias": ["10.8"], 
@@ -194,7 +194,7 @@
         {
             "criterias": ["11.1", "11.2", "11.5", "11.6", "11.7"], 
             "title": "identification des champs, des contrôles et des regroupements de formulaires",
-            "desc": "L'identification de ces éléments fournit aux aveugles et grands malvoyants les informations nécessaires pour pouvoir remplir un formulaire. Les handicapés moteurs utilisant un système de reconnaissance vocale s'appuient aussi sur ces éléments pour se déplacer dans les différents [champs](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#champ-de-saisie-de-formulaire) et actionner les boutons. Pour associer une [étiquette](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#etiquette-de-champ-de-formulaire) (`<label>`) à un champ de formulaire on peut utiliser l'attribut `for` de l'étiquette dont la valeur doit être identique à celle de l'attribut `id` du champ. Les [champs de même nature](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#champs-de-meme-nature) doivent être regroupés, cela peut être réalisé via l'élément `<fieldset>` auquel on doit fournir une [légende](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#legende) via l'élément `<legend>`. "         
+            "desc": "L'identification de ces éléments fournit aux aveugles et grands malvoyants les informations nécessaires pour pouvoir remplir un formulaire. Les handicapés moteurs utilisant un système de reconnaissance vocale s'appuient aussi sur ces éléments pour se déplacer dans les différents [champs](https://accessibilite.public.lu/fr/raweb1/glossaire.html#champ-de-saisie-de-formulaire) et actionner les boutons. Pour associer une [étiquette](https://accessibilite.public.lu/fr/raweb1/glossaire.html#etiquette-de-champ-de-formulaire) (`<label>`) à un champ de formulaire on peut utiliser l'attribut `for` de l'étiquette dont la valeur doit être identique à celle de l'attribut `id` du champ. Les [champs de même nature](https://accessibilite.public.lu/fr/raweb1/glossaire.html#champs-de-meme-nature) doivent être regroupés, cela peut être réalisé via l'élément `<fieldset>` auquel on doit fournir une [légende](https://accessibilite.public.lu/fr/raweb1/glossaire.html#legende) via l'élément `<legend>`. "         
         },
         {
             "criterias": ["11.9"], 
@@ -212,7 +212,7 @@
             "criterias": ["12.6"], 
             "title": "*landmarks*{lang=en} ARIA",
             "desc": [ 
-                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone&nbsp;:", 
+                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks](https://accessibilite.public.lu/fr/raweb1/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone&nbsp;:", 
                 "- `role=banner` pour l'entête,",
                 "- `role=navigation` pour le menu de navigation,",
                 "- `role=main` pour la zone de contenu principale,",
@@ -223,12 +223,12 @@
         {
             "criterias": ["12.7"], 
             "title": "liens d'accès rapide",
-            "desc": "Les [liens d'accès rapide](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#liens-d-evitement-ou-d-acces-rapide) sont des liens présents en début de page et permettent aux utilisateurs qui naviguent au clavier et aux utilisateurs malvoyants qui utilisent une loupe d'écran d'éviter des zones de contenus redondants comme l'entête et la navigation. Il est indispensable d'avoir au moins un lien d'accès rapide vers la zone de contenu principale (`<main>`). Ces liens peuvent être positionnés hors écran et apparaître à la prise de focus."         
+            "desc": "Les [liens d'accès rapide](https://accessibilite.public.lu/fr/raweb1/glossaire.html#liens-d-evitement-ou-d-acces-rapide) sont des liens présents en début de page et permettent aux utilisateurs qui naviguent au clavier et aux utilisateurs malvoyants qui utilisent une loupe d'écran d'éviter des zones de contenus redondants comme l'entête et la navigation. Il est indispensable d'avoir au moins un lien d'accès rapide vers la zone de contenu principale (`<main>`). Ces liens peuvent être positionnés hors écran et apparaître à la prise de focus."         
         }, 
         {
             "criterias": ["12.8"], 
             "title": "ordre de tabulation",
-            "desc": "L'[ordre de tabulation](https://accessibilite.public.lu/fr/rgaa4.1.2/glossaire.html#ordre-de-tabulation), c'est-à-dire l'ordre dans lequel le focus se déplace lorsqu'on utilise les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>, doit être cohérent. Si l'ordre de tabulation est incohérent, les aveugles, les déficients visuels, les handicapés moteurs et handicapés cognitifs auront de grandes difficultés à naviguer dans la page."         
+            "desc": "L'[ordre de tabulation](https://accessibilite.public.lu/fr/raweb1/glossaire.html#ordre-de-tabulation), c'est-à-dire l'ordre dans lequel le focus se déplace lorsqu'on utilise les touches <kbd>tab</kbd> et <kbd>shift-tab</kbd>, doit être cohérent. Si l'ordre de tabulation est incohérent, les aveugles, les déficients visuels, les handicapés moteurs et handicapés cognitifs auront de grandes difficultés à naviguer dans la page."         
         },
         {
             "criterias": ["12.11"], 
