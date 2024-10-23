@@ -131,6 +131,11 @@ for (let i=0; i<3; i++) {
     }
 }
 
+if (info['pages'][0]['label'] == info['pages'][1]['label'] || info['pages'][1]['label'] == info['pages'][2]['label'] || info['pages'][2]['label'] == info['pages'][0]['label']) {
+    console.error('Error: multiple pages have the same title '+ siteName)
+    exit(1)
+}
+
 if (statements[siteName] === undefined) {
     console.error('site not found in statements: '+ siteName)
     exit(1)
