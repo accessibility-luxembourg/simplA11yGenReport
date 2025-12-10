@@ -59,6 +59,29 @@ function formatKeys(str) {
                 .replaceAll('Esc', '<kbd>Echap</kbd>')
 }
 
+// some site names start with www and some others not. Until we have normalised all the names everywhere, we will need to try with and without www.
+function findUrl(siteName, names, sourceLabel, errorType) {
+    if (siteName in names) {
+        return siteName
+    }
+    if (siteName.match(/^www\./)) {
+        siteName = siteName.replace(/^www\./, '')
+        if (siteName in names) {
+            return siteName
+        }
+    }
+    if ('www.'+siteName in names) {
+        return 'www.'+siteName
+    }
+    const msg = `${errorType}: ${siteName} not found in ${sourceLabel}`
+    if (errorType.toLowerCase() == 'error') {
+        console.error(msg)
+    } else {
+        console.log(msg)
+    }
+    return
+}
+
 // read issues from Excel sheet
 const issues = []
 const topicsToDisplay = []
@@ -136,16 +159,13 @@ if (info['pages'][0]['label'] == info['pages'][1]['label'] || info['pages'][1]['
     exit(1)
 }
 
-if (statements[siteName] === undefined) {
-    console.error('site not found in statements: '+ siteName)
+const statementsUrl = findUrl (siteName, statements, 'statements', 'Error')
+const declaration = statements[statementsUrl]
+if (declaration === undefined) {
     exit(1)
 } 
-
-if (docs[siteName] === undefined) {
-    console.log('Warning: site not found in office-files.json: '+ siteName)
-} 
-
-const declaration = statements[siteName]
+const docsInfosUrl = findUrl(siteName, docs, 'office-files.json', 'Warning')
+const docsInfos = docs[docsInfosUrl]
 
 // check if the file "accessibility-statements.json" has the right format
 const availableType = typeof declaration.available
@@ -169,9 +189,6 @@ if (declaration.missing !== undefined) {
         exit(1)
     }
 }
-
-
-const docsInfos = docs[siteName]
 
 
 // render issues
