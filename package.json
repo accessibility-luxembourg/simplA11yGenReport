@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "checklinks": "npx check-html-links dist/ --validate-externals"
+    "checklinks": "npx check-html-links out/ --validate-externals"
   },
   "author": "",
   "license": "MIT",
