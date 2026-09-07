@@ -8,7 +8,7 @@
         {
             "criterias": ["1.2"], 
             "title": "images de décoration",
-            "desc": "Les [images de décoration](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#image-de-decoration) ne doivent pas avoir d'alternative textuelle et doivent être ignorées correctement par les technologies d'assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d'écran (aveugles et grands malvoyants). Pour une image matricielle, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `aria-hidden=\"true\"`."
+            "desc": "Les [images de décoration](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#image-de-decoration) sans légende ne doivent pas avoir d'alternative textuelle et doivent être ignorées correctement par les technologies d'assistance. Dans le cas contraire, elles peuvent causer des problèmes de compréhension aux utilisateurs de lecteurs d'écran (aveugles et grands malvoyants). Pour une image matricielle, son attribut `alt` doit être vide. Pour une image vectorielle SVG, celle-ci doit avoir l'attribut `aria-hidden=\"true\"`."
         },
         {
             "criterias": ["1.4", "1.5"], 
@@ -210,14 +210,9 @@
     "12": [
         {
             "criterias": ["12.6"], 
-            "title": "*landmarks*{lang=en} ARIA",
+            "title": "*landmarks*{lang=en}",
             "desc": [ 
-                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des points de repères ou [landmarks](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Chacune de ces zones doit avoir un attribut `role` dont la valeur correspond au type de zone&nbsp;:", 
-                "- `role=banner` pour l'entête,",
-                "- `role=navigation` pour le menu de navigation,",
-                "- `role=main` pour la zone de contenu principale,",
-                "- `role=contentinfo` pour le pied de page,",
-                "- `role=search` pour le moteur de recherche."
+                "Les utilisateurs aveugles utilisent pour naviguer rapidement dans une page des repères de navigation ou [landmarks](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#landmarks){lang=en}. Ceux-ci définissent les principales zones de la page comme l'entête, le menu de navigation, la zone de contenu principale, le pied de page, le moteur de recherche. Il est nécessaire d'implémenter correctement ces *landmarks*{lang=en} pour faciliter la navigation des utilisateurs aveugles."
             ]         
         },
         {
