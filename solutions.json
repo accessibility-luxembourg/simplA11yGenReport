@@ -28,8 +28,8 @@
                 "1.6",
                 "1.7"
             ],
-            "title": "images porteuses d'information complexes",
-            "desc": "Certaines images porteuses d'informations sont particulièrement complexes, par exemple lorsqu'elles présentent des graphiques, schémas, cartes, etc. Dans ce cas, ces images nécessitent une description détaillée adjacente à l'image afin de permettre aux personnes aveugles et dyslexiques d'accéder à toutes les informations véhiculées par l'image. Pour mettre à disposition cette description détaillée, plusieurs solutions sont possibles. Le texte peut être adjacent à l'image dans la même page ou on peut placer un lien adjacent à l'image qui mène à une page où se trouve la description. Le texte peut aussi être inclus dans un composant permettant de le masquer et de l'afficher sur demande, au clic d'un bouton \"afficher la description de l'image\" (via le motif de conception ARIA [\"disclosure\"](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/){lang=en})."
+            "title": "images porteuses d'informations complexes",
+            "desc": "Certaines images porteuses d'informations sont particulièrement complexes, par exemple lorsqu'elles présentent des graphiques, schémas, cartes, etc. Dans ce cas, ces images nécessitent une description détaillée adjacente à l'image afin de permettre aux personnes aveugles et dyslexiques d'accéder à toutes les informations véhiculées par l'image. Pour mettre à disposition cette description détaillée, plusieurs solutions sont possibles. Le texte peut être adjacent à l'image dans la même page, on peut également placer un lien adjacent à l'image qui mène à une page où se trouve la description. Le texte peut aussi être inclus dans un composant permettant de le masquer et de l'afficher sur demande, au clic d'un bouton \"afficher la description de l'image\" (via le motif de conception ARIA [\"disclosure\"](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/){lang=en})."
         }
     ],
     "2": [
@@ -177,7 +177,7 @@
                 "8.2"
             ],
             "title": "validité du code source de la page",
-            "desc": "Les lecteurs d'écran s'appuient sur la sémantique des balises HTML pour restituer le contenu et naviguer, si la syntaxe HTML n'est pas respectée ou si les balises sont détournées, cela peut avoir un impact sur la navigation qui peut devenir inopérante et la restitution qui peut devenir incompréhensible. Pour vérifier la validité de la syntaxe HTML, on peut utiliser le [validateur HTML du W3C](https://validator.w3.org/nu/) avec le *bookmarklet*{lang=en} [\"WCAG 2.1 parsing error\"](https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/){lang=en}. Ce *bookmarklet*{lang=en} filtre les résultats et ne montre que les erreurs ayant un impact sur l'accessibilité."
+            "desc": "Les lecteurs d'écran s'appuient sur la sémantique des balises HTML pour restituer le contenu et naviguer. Si la syntaxe HTML n'est pas respectée ou si les balises sont détournées, cela peut avoir un impact sur la navigation, qui peut devenir inopérante, comme sur la restitution, qui peut devenir incompréhensible. Pour vérifier la validité de la syntaxe HTML, on peut utiliser le [validateur HTML du W3C](https://validator.w3.org/nu/) avec le *bookmarklet*{lang=en} [\"WCAG 2.1 parsing error\"](https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/){lang=en}. Ce *bookmarklet*{lang=en} filtre les résultats et ne montre que les erreurs ayant un impact sur l'accessibilité."
         },
         {
             "criterias": [
@@ -203,7 +203,7 @@
                 "8.6"
             ],
             "title": "titre de page",
-            "desc": "Le titre de page est la première information restituée aux aveugles et grands malvoyants, elle leur permet de confirmer que le lien sur lequel ils viennent de cliquer les a bien menés au bon endroit, il permet aussi de retrouver une page dans l'historique, les favoris ou les onglets ouverts. Tout changement significatif de l'état de la page doit être repris dans le titre de la page (pagination, erreur, étape d'un workflow, etc.). "
+            "desc": "Le titre de page est la première information restituée aux aveugles et grands malvoyants, elle leur permet de confirmer que le lien sur lequel ils viennent de cliquer les a bien menés au bon endroit. Il permet aussi de retrouver une page dans l'historique, les favoris ou les onglets ouverts. Tout changement significatif de l'état de la page doit être repris dans le titre de la page (pagination, erreur, étape d'un workflow, etc.). "
         }
     ],
     "9": [
@@ -219,7 +219,7 @@
                 "9.2"
             ],
             "title": "structure du document HTML5",
-            "desc": "La structuration du document HTML5 permet aux aveugles, grands malvoyants et handicapés moteurs de naviguer très rapidement entre les zones principales de la page (entête, pied de page, zone de contenu principale, navigation, moteur de recherche, ...). Ces zones doivent être correctement structurées afin d'obtenir, selon leur fonction, les rôles calculés `banner`, `navigation`, `main`, `contentinfo` ou `search`. Ces rôles peuvent notamment être obtenus au moyen des éléments HTML5 appropriés (`<header>`, `<nav>`, `<main>`, `<footer>`, `<search>`) ou de rôles WAI-ARIA équivalents."
+            "desc": "La structuration du document HTML5 permet aux aveugles, grands malvoyants et handicapés moteurs de naviguer très rapidement entre les zones principales de la page (entête, pied de page, zone de contenu principal, navigation, moteur de recherche, ...). Ces zones doivent être correctement structurées afin d'obtenir, selon leur fonction, les rôles calculés `banner`, `navigation`, `main`, `contentinfo` ou `search`. Ces rôles peuvent notamment être obtenus au moyen des éléments HTML5 appropriés (`<header>`, `<nav>`, `<main>`, `<footer>`, `<search>`) ou de rôles WAI-ARIA équivalents."
         }
     ],
     "10": [
@@ -235,7 +235,7 @@
                 "10.8"
             ],
             "title": "contenus cachés",
-            "desc": "Tout contenu dans la page peut être ignoré par les technologies d'assistance (notamment en utilisant l'attribut `aria-hidden=\"true\"`). Si un contenu est visible mais ignoré par les technologies d'assistance, les utilisateurs de ces technologies d'assistance ne pourront pas prendre connaissance du contenu ni interagir avec les éventuels éléments interactifs qu'ils pourraient contenir. La visibilité d'un contenu doit donc être cohérente pour tous les utilisateurs du site, qu'ils utilisent ou non une technologie d'assistance."
+            "desc": "Tout contenu dans la page peut être ignoré par les technologies d'assistance (notamment en utilisant l'attribut `aria-hidden=\"true\"`). Si un contenu est visible mais ignoré par les technologies d'assistance, les utilisateurs de ces technologies d'assistance ne pourront pas prendre connaissance du contenu ni interagir avec les éventuels éléments interactifs qu'ils pourraient contenir. La visibilité d'un contenu doit donc être cohérente pour tous les utilisateurs du site, qu'ils se servent ou non d'une technologie d'assistance."
         },
         {
             "criterias": [
@@ -250,7 +250,7 @@
                 "10.14"
             ],
             "title": "contenus additionnels au survol et au focus",
-            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex&nbsp;: infobulles, menus déroulants). Tout élément qui apparaît au survol doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus. Pour les malvoyants qui utilisent une loupe d'écran, ces contenus apparaissant au survol peuvent perturber la consultation du site. Ils doivent pouvoir être masqués simplement. Si le contenu apparaît hors de la zone affichée par la loupe, il doit pouvoir être survolé à la souris."
+            "desc": "Les utilisateurs doivent pouvoir garder le contrôle des contenus additionnels qui apparaissent au survol et au focus (ex&nbsp;: infobulles, menus déroulants). Tout élément qui apparaît au survol doit aussi pouvoir apparaître au clavier, lorsque l'élément prend le focus."
         }
     ],
     "11": [
@@ -263,7 +263,7 @@
                 "11.7"
             ],
             "title": "identification des champs, des contrôles et des regroupements de formulaires",
-            "desc": "L'identification de ces éléments fournit aux aveugles et grands malvoyants les informations nécessaires pour pouvoir remplir un formulaire. Les handicapés moteurs utilisant un système de reconnaissance vocale s'appuient aussi sur ces éléments pour se déplacer dans les différents [champs](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#champ-de-saisie-de-formulaire) et actionner les boutons. Pour associer une [étiquette](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#etiquette-de-champ-de-formulaire) (`<label>`) à un champ de formulaire on peut utiliser l'attribut `for` de l'étiquette dont la valeur doit être identique à celle de l'attribut `id` du champ. Les [champs de même nature](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#champs-de-meme-nature) doivent être regroupés, cela peut être réalisé via l'élément `<fieldset>` auquel on doit fournir une [légende](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#legende) via l'élément `<legend>`. "
+            "desc": "L'identification de ces éléments fournit aux aveugles et grands malvoyants les informations nécessaires pour pouvoir remplir un formulaire. Les handicapés moteurs utilisant un système de reconnaissance vocale s'appuient aussi sur ces éléments pour se déplacer dans les différents [champs](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#champ-de-saisie-de-formulaire) et actionner les boutons. Pour associer une [étiquette](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#etiquette-de-champ-de-formulaire) (`<label>`) à un champ de formulaire, on peut utiliser l'attribut `for` de l'étiquette dont la valeur doit être identique à celle de l'attribut `id` du champ. Les [champs de même nature](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#champs-de-meme-nature) doivent être regroupés, cela peut être réalisé via l'élément `<fieldset>` auquel on doit fournir une [légende](https://accessibilite.public.lu/fr/raweb1.1/glossaire.html#legende) via l'élément `<legend>`. "
         },
         {
             "criterias": [
@@ -316,7 +316,7 @@
                 "13.1"
             ],
             "title": "contrôle des limites de temps",
-            "desc": "L'utilisation de technologies d'assistance impacte directement la rapidité de lecture et d'utilisation d'un site. Dans ces conditions, l'absence de contrôle des limites de temps peut rendre impossible la lecture ou la réalisation de tâches. Les utilisateurs impactés sont les aveugles et déficients visuels, les handicapés moteurs et les handicapés mentaux."
+            "desc": "L'utilisation de technologies d'assistance impacte directement la rapidité de lecture et d'utilisation d'un site. Dans ces conditions, l'absence de contrôle des limites de temps peut rendre impossible la lecture ou la réalisation de tâches. Les utilisateurs impactés sont les aveugles et déficients visuels, les handicapés moteurs et les handicapés cognitifs."
         },
         {
             "criterias": [
