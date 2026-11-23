@@ -1,88 +1,87 @@
 @media print {
-  #site {
-    string-set: title content(text);
-  }
-
-  .logo {
-    display: block;
-    position: running(logoRunning);
-  }
-
-  .logo > img {
-    margin-top: 6mm;
-  }
-
-  @page {
-    size: A4;
-    margin: 15mm;
-    margin-top: 26mm;
-    
-    @top-left {
-      content: element(logoRunning);
-      width: 80mm;
+    @page {
+        size: A4;
+        margin: 26mm 15mm 20mm;
     }
 
-    @bottom-right {
-      content: counter(page) "/" counter(pages);
-      font-family: Calibri;
+    body,
+    main,
+    header,
+    footer {
+        font-size: 11pt;
+        font-family: Calibri, Arial, sans-serif;
+        font-variant-ligatures: none;
+        margin: 0;
+        width: 100%;
+        color: #000;
+        background: #fff;
     }
 
-    @bottom-left {
-      content: "Audit d'accessibilité simplifié";
-      font-family: Calibri;
+    p {
+        margin: 0.2em 0 0.8em 0;
+        line-height: 1.3em;
     }
-  
-    @bottom-center {
-      content: string(title);
-      font-family: Calibri;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 1em 0 0.5em 0;
+        font-weight: bold;
     }
-  
-  }
-  body, main, header, footer {
-    font-size: 11pt;
-    font-family: Calibri;
-    font-variant-ligatures: none;
-    margin: 0;
-    width: 100%;
-    color: #000;
-    background: #fff;
-  }
 
-  p {
-    margin: 0.2em 0 0.8em 0;
-    line-height: 1.3em;
-  }
-  
-  h1,h2,h3,h4,h5, h6 {
-    margin: 1em 0 0.2em 0;
-    font-weight: bold;
-  }
-  h1.break,h2.break,h3.break,h4.break,h5.break, h6.break {
-    break-before: page;
-  }
+    h1.break,
+    h2.break,
+    h3.break,
+    h4.break,
+    h5.break,
+    h6.break {
+        break-before: page;
+    }
 
+    h1 {
+        font-size: 160%;
+    }
 
-  h1 { font-size: 160%; }
-  h2 { font-size: 140%; 
-    break-after: avoid;
-  }
-  h3 { font-size: 120%; }
-  h4 { font-size: 100%; }
-  h5 { font-size: 90%; }
-  h6 { font-size: 80%; }
-  
-  a {
-    color: #00f;
-  }
+    h2 {
+        font-size: 140%;
+        break-after: avoid;
+    }
 
-  .nobreak {
-    break-inside: avoid;
-  }
+    h3 {
+        font-size: 120%;
+    }
 
-  footer {
-    padding-top: 1em;
-    border-top: 1px solid #eaecef;
-  }
+    h4 {
+        font-size: 100%;
+    }
 
+    h5 {
+        font-size: 90%;
+    }
+
+    h6 {
+        font-size: 80%;
+    }
+
+    a {
+        color: #00f;
+    }
+
+    h3,
+    h4,
+    h5 {
+        break-after: avoid;
+    }
+
+    .nobreak {
+        break-inside: avoid;
+    }
+
+    footer {
+        padding-top: 1em;
+        border-top: 1px solid #eaecef;
+    }
 }
-

@@ -1,0 +1,29 @@
+{
+  "qualitativeScale": [
+    {
+      "min": 0,
+      "maxExclusive": 20,
+      "label": "Très faible"
+    },
+    {
+      "min": 20,
+      "maxExclusive": 40,
+      "label": "Faible"
+    },
+    {
+      "min": 40,
+      "maxExclusive": 60,
+      "label": "Moyen"
+    },
+    {
+      "min": 60,
+      "maxExclusive": 80,
+      "label": "Bon"
+    },
+    {
+      "min": 80,
+      "maxInclusive": 100,
+      "label": "Très bon"
+    }
+  ]
+}

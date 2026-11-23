@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://accessibilite.public.lu/docs/audit.schema.json",
+  "title": "Observatory JSON schema for simplified RAWeb 1.1 audits",
+  "description": "Validation profile for completed simplified RAWeb 1.1 audits consumed by GenReport.",
+  "type": "object",
+  "properties": {
+    "auditor": {
+      "type": "string",
+      "description": "Name of the organization that performed the audit."
+    },
+    "context": {
+      "type": "string",
+      "description": "Requesting organization, auditing organization, and type of audit."
+    },
+    "audited_at": {
+      "type": "string",
+      "description": "Date when the audit was completed, in YYYY-MM-DD format.",
+      "format": "date"
+    },
+    "inventory": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Exact item name in the public website inventory."
+        }
+      },
+      "required": ["name"]
+    },
+    "platform": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["Web"],
+          "description": "Audited platform: Web."
+        }
+      },
+      "required": ["name"]
+    },
+    "audit_reference": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["RAWeb"],
+          "description": "Applied standard: RAWeb."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version of the applied standard, for example 1 or 1.1 for RAWeb and RAAM."
+        }
+      },
+      "required": ["name", "version"]
+    },
+    "control_type": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["Simplifié"],
+          "description": "Audit type required by the Observatory schema."
+        }
+      },
+      "required": ["name"]
+    },
+    "assessed_level": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["A", "AA"],
+          "description": "Assessed conformance level: A or AA."
+        }
+      },
+      "required": ["name"]
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "description": "Page or screen number, from 1 to 20."
+          },
+          "uri": {
+            "type": "string",
+            "description": "Web page address or short name of the mobile screen."
+          },
+          "title": {
+            "type": "string",
+            "description": "Optional page title recorded at the time of the audit."
+          },
+          "assessments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/crit"
+            },
+            "description": "Criterion assessments for this page or screen."
+          }
+        },
+        "required": ["number", "uri", "assessments"]
+      }
+    }
+  },
+  "required": [
+    "auditor",
+    "context",
+    "audited_at",
+    "inventory",
+    "platform",
+    "audit_reference",
+    "control_type",
+    "assessed_level",
+    "pages"
+  ],
+  "$defs": {
+    "crit": {
+      "type": "object",
+      "properties": {
+        "criterion": {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": "string",
+              "pattern": "^\\d{1,2}\\.\\d{1,2}$",
+              "description": "Number of the assessed criterion."
+            }
+          },
+          "required": ["number"]
+        },
+        "status": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": ["C", "NC", "NA", "NT"],
+              "description": "Status: conformant, non-conformant, not applicable, or not tested."
+            }
+          },
+          "required": ["name"]
+        },
+        "exemption": {
+          "type": "boolean",
+          "description": "False by default; true when the criterion has an exemption."
+        },
+        "exemption_comment": {
+          "type": "string",
+          "description": "Optional comment about the exemption."
+        },
+        "changes_to_do": {
+          "type": "string",
+          "description": "Detected issue and changes to make. Optional field."
+        },
+        "patches_follow_up": {
+          "type": "string",
+          "description": "Follow-up on fixes. Optional field."
+        }
+      },
+      "required": [
+        "criterion",
+        "status",
+        "exemption",
+        "exemption_comment",
+        "changes_to_do",
+        "patches_follow_up"
+      ]
+    }
+  }
+}

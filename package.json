@@ -1,20 +1,23 @@
 {
   "name": "simpla11ygenreport",
-  "version": "1.0.0",
+  "version": "2.2.7",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "checklinks": "npx check-html-links out/ --validate-externals"
+    "checklinks": "npx check-html-links out/ --validate-externals",
+    "test": "node --test"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "csv-parse": "^4.16.3",
-    "ejs": "^3.1.6",
-    "markdown-it": "^12.2.0",
-    "markdown-it-attrs": "^4.0.0",
-    "pagedjs": "^0.2.0",
-    "pagedjs-cli": "^0.4.0",
-    "xlsx": "^0.17.0"
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "ejs": "^7.0.2",
+    "markdown-it": "^15.0.3",
+    "markdown-it-attrs": "^5.0.1",
+    "playwright": "^1.64.1"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

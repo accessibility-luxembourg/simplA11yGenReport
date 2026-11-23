@@ -1,26 +1,68 @@
 <div class="topic">
-    <div class="nobreak">
-        <h3 id="<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>">Thématique "<%= topic.name.toLowerCase() %>"</h3>
-        <a class="toc" href="#<%= topic.name.replace(/[\s\']+/g, '-').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") %>"><%= topic.name %></a>
-        <div class="desc"><h4>Recommandations générales</h4> <%- md.render(topic.desc) %></div>
-    </div>
-    <% 
-        const sol = solutions[topic.num]
-        const iss = issues.filter(e => {return (e.topic == topic.num)}) 
+    <%
+        const topicId = topic.name
+            .replace(/[\s']+/g, '-')
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '');
 
-        sol.forEach(s => { 
-            const shortList = iss.filter(e => {return (s.criterias.includes(e.criteria))})
-            if (shortList.length != 0) {
-            %>
-            <div class="nobreak">
-            <h4>Cas rencontré&nbsp;: <%- md.renderInline(s.title) %></h4>
-                <%- md.render(s.desc) %>
+        const sol = solutions[topic.num] || [];
+        const iss = issues.filter(issue => issue.topic == topic.num);
+        const covered = new Set();
+    %>
+
+    <div class="nobreak">
+        <h3 id="<%= topicId %>">Thématique "<%= topic.name.toLowerCase() %>"</h3>
+
+        <a class="toc" href="#<%= topicId %>"><%= topic.name %></a>
+
+        <div class="desc">
+            <h4>Recommandations générales</h4>
+            <%- md.render(topic.desc) %>
+        </div>
+    </div>
+
+    <%
+        sol.forEach(solution => {
+            const matching = iss.filter(issue =>
+                solution.criterias.includes(issue.criteria)
+            );
+
+            if (!matching.length) return;
+
+            matching.forEach(issue => covered.add(issue));
+    %>
+        <div class="nobreak">
+            <h4>Cas rencontré&nbsp;: <%- md.renderInline(solution.title) %></h4>
+            <%- md.render(solution.desc) %>
+        </div>
+
+        <%
+            matching.forEach(issue => {
+                const page = info.pages.find(
+                    item => String(item.id) === String(issue.page)
+                );
+        %>
+            <div class="nobreak finding" data-criterion="<%= issue.criteria %>">
+                <h5>Exemples de problèmes détectés sur la <% if (page) { %><a href="<%= page.value %>">page <%= issue.page %></a><% } else { %>page <%= issue.page %><% } %></h5>
+
+                <%- formatKeys(mdForFindings.render(issue.comment || '')) %>
             </div>
-            <div class="nobreak">
-            <h5>Exemples de problèmes détectés sur la <a href="<%= info.pages[parseInt(shortList[0].page)-1].value %>">page <%= shortList[0].page %></a></h5>
-            <%- formatKeys(mdForExcel.render(shortList[0].comment)) %>
-            </div>
-    <%      }
-        })
-    %> 
+        <% }); %>
+    <% }); %>
+
+    <%
+        iss.filter(issue => !covered.has(issue)).forEach(issue => {
+            const page = info.pages.find(
+                item => String(item.id) === String(issue.page)
+            );
+    %>
+        <div class="nobreak finding" data-criterion="<%= issue.criteria %>">
+            <h4>Autre problème rencontré</h4>
+
+            <h5>Exemples de problèmes détectés sur la <% if (page) { %><a href="<%= page.value %>">page <%= issue.page %></a><% } else { %>page <%= issue.page %><% } %></h5>
+
+            <%- formatKeys(mdForFindings.render(issue.comment || '')) %>
+        </div>
+    <% }); %>
 </div>

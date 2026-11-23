@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Audit d'accessibilité simplifié du site <%= info.site %></title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="" />
+        <meta name="author" content="<%= info.auditor %>" />
         <meta name="subject" content="" />
         <meta name="creator" content="simplA11yGenReport" />
         <meta name="dcterms.created" content="<%= (new Date()).toISOString().split('T')[0] %>" />
@@ -15,6 +15,7 @@
             <%- include('print.css') %>
         </style>
     </head>
+
     <body class="markdown-body">
         <header role="banner">
             <div class="toc">
@@ -23,25 +24,43 @@
                 <a href="#avertissement">Avertissement</a>
                 <a href="#echantillon">Échantillon</a>
                 <a href="#declaration">Déclaration</a>
+
                 <% if (docs !== undefined && (docs['pdf-exempt'] >= 50 || docs['files'] >= 100)) { %>
                     <a href="#documents-bureautiques">Documents bureautiques</a>
                 <% } %>
+
                 <a href="#annexe-technique">Annexe technique</a>
             </div>
+
             <div class="skip-link">
                 <a href="#main">Contenu principal</a>
             </div>
+
             <h1 id="title">Audit d’accessibilité simplifié - <span id="site"><%= info.site %></span></h1>
-            <p><%= info.date %></p>
+
+            <p>Date : <%= new Intl.DateTimeFormat('fr-FR', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'UTC'
+            }).format(new Date(info.date + 'T00:00:00Z')) %></p>
         </header>
+
         <main role="main" id="main" tabindex="-1">
-                <%- include('intro', {info: info}) %>
+            <%- include('intro', {info: info}) %>
+
             <h2 id="annexe-technique">Annexe technique</h2>
-            <% if (issues.length == 0) { %>
+
+            <% if (issues.length === 0) { %>
                 <p>Aucun problème d’accessibilité détecté sur l'échantillon de pages.</p>
             <% } else { %>
                 <% topics.forEach(topic => { %>
-                    <%- include('topic', {topic: topic, solutions: solutions, issues: issues, formatKeys: formatKeys}) %>
+                    <%- include('topic', {
+                        topic: topic,
+                        solutions: solutions,
+                        issues: issues,
+                        formatKeys: formatKeys
+                    }) %>
                 <% }) %>
             <% } %>
         </main>

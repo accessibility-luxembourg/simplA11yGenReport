@@ -2,6 +2,7 @@
     position: relative;
     height: 1em;
 }
+
 .skip-link a {
     position: absolute;
     left: -7000px;
@@ -12,14 +13,40 @@
 }
 
 div.topic > div.nobreak > div.desc {
-   background-color: #eee;
-   padding: 1em;
+    background-color: #eee;
+    padding: 1em;
 }
 
 div.topic > div.nobreak > div.desc > p {
     margin-bottom: 0;
 }
 
-.logo,.toc {
+.logo,
+.toc {
     display: none;
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: 0.08em;
+    overflow-wrap: anywhere;
+}
+
+.topic h5 {
+    margin-top: 0;
+}
+
+.finding {
+    margin-bottom: 1em;
+}
+
+@media screen {
+    header,
+    main,
+    footer {
+        width: 80%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
